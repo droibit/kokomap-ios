@@ -1,0 +1,426 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		DAFBFEE41B42C6B200FAAD05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFBFEE31B42C6B200FAAD05 /* AppDelegate.swift */; };
+		DAFBFEE61B42C6B200FAAD05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFBFEE51B42C6B200FAAD05 /* ViewController.swift */; };
+		DAFBFEE91B42C6B200FAAD05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFBFEE71B42C6B200FAAD05 /* Main.storyboard */; };
+		DAFBFEEB1B42C6B200FAAD05 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAFBFEEA1B42C6B200FAAD05 /* Images.xcassets */; };
+		DAFBFEEE1B42C6B200FAAD05 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAFBFEEC1B42C6B200FAAD05 /* LaunchScreen.xib */; };
+		DAFBFEFA1B42C6B300FAAD05 /* kokomapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFBFEF91B42C6B200FAAD05 /* kokomapTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DAFBFEF41B42C6B200FAAD05 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAFBFED61B42C6B200FAAD05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DAFBFEDD1B42C6B200FAAD05;
+			remoteInfo = kokomap;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		DAFBFEDE1B42C6B200FAAD05 /* kokomap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kokomap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAFBFEE21B42C6B200FAAD05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAFBFEE31B42C6B200FAAD05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DAFBFEE51B42C6B200FAAD05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DAFBFEE81B42C6B200FAAD05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DAFBFEEA1B42C6B200FAAD05 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		DAFBFEED1B42C6B200FAAD05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		DAFBFEF31B42C6B200FAAD05 /* kokomapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kokomapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAFBFEF81B42C6B200FAAD05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAFBFEF91B42C6B200FAAD05 /* kokomapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kokomapTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAFBFEDB1B42C6B200FAAD05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAFBFEF01B42C6B200FAAD05 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		DAFBFED51B42C6B200FAAD05 = {
+			isa = PBXGroup;
+			children = (
+				DAFBFEE01B42C6B200FAAD05 /* kokomap */,
+				DAFBFEF61B42C6B200FAAD05 /* kokomapTests */,
+				DAFBFEDF1B42C6B200FAAD05 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		DAFBFEDF1B42C6B200FAAD05 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAFBFEDE1B42C6B200FAAD05 /* kokomap.app */,
+				DAFBFEF31B42C6B200FAAD05 /* kokomapTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAFBFEE01B42C6B200FAAD05 /* kokomap */ = {
+			isa = PBXGroup;
+			children = (
+				DAFBFEE31B42C6B200FAAD05 /* AppDelegate.swift */,
+				DAFBFEE51B42C6B200FAAD05 /* ViewController.swift */,
+				DAFBFEE71B42C6B200FAAD05 /* Main.storyboard */,
+				DAFBFEEA1B42C6B200FAAD05 /* Images.xcassets */,
+				DAFBFEEC1B42C6B200FAAD05 /* LaunchScreen.xib */,
+				DAFBFEE11B42C6B200FAAD05 /* Supporting Files */,
+			);
+			path = kokomap;
+			sourceTree = "<group>";
+		};
+		DAFBFEE11B42C6B200FAAD05 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DAFBFEE21B42C6B200FAAD05 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DAFBFEF61B42C6B200FAAD05 /* kokomapTests */ = {
+			isa = PBXGroup;
+			children = (
+				DAFBFEF91B42C6B200FAAD05 /* kokomapTests.swift */,
+				DAFBFEF71B42C6B200FAAD05 /* Supporting Files */,
+			);
+			path = kokomapTests;
+			sourceTree = "<group>";
+		};
+		DAFBFEF71B42C6B200FAAD05 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DAFBFEF81B42C6B200FAAD05 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAFBFEDD1B42C6B200FAAD05 /* kokomap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAFBFEFD1B42C6B300FAAD05 /* Build configuration list for PBXNativeTarget "kokomap" */;
+			buildPhases = (
+				DAFBFEDA1B42C6B200FAAD05 /* Sources */,
+				DAFBFEDB1B42C6B200FAAD05 /* Frameworks */,
+				DAFBFEDC1B42C6B200FAAD05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kokomap;
+			productName = kokomap;
+			productReference = DAFBFEDE1B42C6B200FAAD05 /* kokomap.app */;
+			productType = "com.apple.product-type.application";
+		};
+		DAFBFEF21B42C6B200FAAD05 /* kokomapTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAFBFF001B42C6B300FAAD05 /* Build configuration list for PBXNativeTarget "kokomapTests" */;
+			buildPhases = (
+				DAFBFEEF1B42C6B200FAAD05 /* Sources */,
+				DAFBFEF01B42C6B200FAAD05 /* Frameworks */,
+				DAFBFEF11B42C6B200FAAD05 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DAFBFEF51B42C6B200FAAD05 /* PBXTargetDependency */,
+			);
+			name = kokomapTests;
+			productName = kokomapTests;
+			productReference = DAFBFEF31B42C6B200FAAD05 /* kokomapTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAFBFED61B42C6B200FAAD05 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = droibit;
+				TargetAttributes = {
+					DAFBFEDD1B42C6B200FAAD05 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					DAFBFEF21B42C6B200FAAD05 = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = DAFBFEDD1B42C6B200FAAD05;
+					};
+				};
+			};
+			buildConfigurationList = DAFBFED91B42C6B200FAAD05 /* Build configuration list for PBXProject "kokomap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAFBFED51B42C6B200FAAD05;
+			productRefGroup = DAFBFEDF1B42C6B200FAAD05 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAFBFEDD1B42C6B200FAAD05 /* kokomap */,
+				DAFBFEF21B42C6B200FAAD05 /* kokomapTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAFBFEDC1B42C6B200FAAD05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAFBFEE91B42C6B200FAAD05 /* Main.storyboard in Resources */,
+				DAFBFEEE1B42C6B200FAAD05 /* LaunchScreen.xib in Resources */,
+				DAFBFEEB1B42C6B200FAAD05 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAFBFEF11B42C6B200FAAD05 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAFBFEDA1B42C6B200FAAD05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAFBFEE61B42C6B200FAAD05 /* ViewController.swift in Sources */,
+				DAFBFEE41B42C6B200FAAD05 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DAFBFEEF1B42C6B200FAAD05 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAFBFEFA1B42C6B300FAAD05 /* kokomapTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		DAFBFEF51B42C6B200FAAD05 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DAFBFEDD1B42C6B200FAAD05 /* kokomap */;
+			targetProxy = DAFBFEF41B42C6B200FAAD05 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		DAFBFEE71B42C6B200FAAD05 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAFBFEE81B42C6B200FAAD05 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DAFBFEEC1B42C6B200FAAD05 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAFBFEED1B42C6B200FAAD05 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DAFBFEFB1B42C6B300FAAD05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DAFBFEFC1B42C6B300FAAD05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAFBFEFE1B42C6B300FAAD05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = kokomap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DAFBFEFF1B42C6B300FAAD05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = kokomap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		DAFBFF011B42C6B300FAAD05 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = kokomapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kokomap.app/kokomap";
+			};
+			name = Debug;
+		};
+		DAFBFF021B42C6B300FAAD05 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = kokomapTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/kokomap.app/kokomap";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAFBFED91B42C6B200FAAD05 /* Build configuration list for PBXProject "kokomap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAFBFEFB1B42C6B300FAAD05 /* Debug */,
+				DAFBFEFC1B42C6B300FAAD05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAFBFEFD1B42C6B300FAAD05 /* Build configuration list for PBXNativeTarget "kokomap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAFBFEFE1B42C6B300FAAD05 /* Debug */,
+				DAFBFEFF1B42C6B300FAAD05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		DAFBFF001B42C6B300FAAD05 /* Build configuration list for PBXNativeTarget "kokomapTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAFBFF011B42C6B300FAAD05 /* Debug */,
+				DAFBFF021B42C6B300FAAD05 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DAFBFED61B42C6B200FAAD05 /* Project object */;
+}
