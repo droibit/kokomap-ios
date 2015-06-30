@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DAFBFEE41B42C6B200FAAD05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFBFEE31B42C6B200FAAD05 /* AppDelegate.swift */; };
-		DAFBFEE61B42C6B200FAAD05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFBFEE51B42C6B200FAAD05 /* ViewController.swift */; };
 		DAFBFEE91B42C6B200FAAD05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFBFEE71B42C6B200FAAD05 /* Main.storyboard */; };
 		DAFBFEEB1B42C6B200FAAD05 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAFBFEEA1B42C6B200FAAD05 /* Images.xcassets */; };
 		DAFBFEEE1B42C6B200FAAD05 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAFBFEEC1B42C6B200FAAD05 /* LaunchScreen.xib */; };
 		DAFBFEFA1B42C6B300FAAD05 /* kokomapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFBFEF91B42C6B200FAAD05 /* kokomapTests.swift */; };
+		DAFBFF181B42C76200FAAD05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFBFF161B42C76200FAAD05 /* AppDelegate.swift */; };
+		DAFBFF191B42C76200FAAD05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFBFF171B42C76200FAAD05 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,14 +28,14 @@
 /* Begin PBXFileReference section */
 		DAFBFEDE1B42C6B200FAAD05 /* kokomap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kokomap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFBFEE21B42C6B200FAAD05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DAFBFEE31B42C6B200FAAD05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DAFBFEE51B42C6B200FAAD05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DAFBFEE81B42C6B200FAAD05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAFBFEEA1B42C6B200FAAD05 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DAFBFEED1B42C6B200FAAD05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		DAFBFEF31B42C6B200FAAD05 /* kokomapTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = kokomapTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFBFEF81B42C6B200FAAD05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAFBFEF91B42C6B200FAAD05 /* kokomapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kokomapTests.swift; sourceTree = "<group>"; };
+		DAFBFF161B42C76200FAAD05 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		DAFBFF171B42C76200FAAD05 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,11 +77,7 @@
 		DAFBFEE01B42C6B200FAAD05 /* kokomap */ = {
 			isa = PBXGroup;
 			children = (
-				DAFBFEE31B42C6B200FAAD05 /* AppDelegate.swift */,
-				DAFBFEE51B42C6B200FAAD05 /* ViewController.swift */,
-				DAFBFEE71B42C6B200FAAD05 /* Main.storyboard */,
-				DAFBFEEA1B42C6B200FAAD05 /* Images.xcassets */,
-				DAFBFEEC1B42C6B200FAAD05 /* LaunchScreen.xib */,
+				DAFBFF151B42C76200FAAD05 /* Sources */,
 				DAFBFEE11B42C6B200FAAD05 /* Supporting Files */,
 			);
 			path = kokomap;
@@ -90,6 +86,8 @@
 		DAFBFEE11B42C6B200FAAD05 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				DAFBFF1B1B42C8BE00FAAD05 /* View */,
+				DAFBFEEA1B42C6B200FAAD05 /* Images.xcassets */,
 				DAFBFEE21B42C6B200FAAD05 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -110,6 +108,24 @@
 				DAFBFEF81B42C6B200FAAD05 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DAFBFF151B42C76200FAAD05 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				DAFBFF161B42C76200FAAD05 /* AppDelegate.swift */,
+				DAFBFF171B42C76200FAAD05 /* ViewController.swift */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		DAFBFF1B1B42C8BE00FAAD05 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DAFBFEE71B42C6B200FAAD05 /* Main.storyboard */,
+				DAFBFEEC1B42C6B200FAAD05 /* LaunchScreen.xib */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +177,7 @@
 				TargetAttributes = {
 					DAFBFEDD1B42C6B200FAAD05 = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = 2M4C25U6D7;
 					};
 					DAFBFEF21B42C6B200FAAD05 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -212,8 +229,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAFBFEE61B42C6B200FAAD05 /* ViewController.swift in Sources */,
-				DAFBFEE41B42C6B200FAAD05 /* AppDelegate.swift in Sources */,
+				DAFBFF181B42C76200FAAD05 /* AppDelegate.swift in Sources */,
+				DAFBFF191B42C76200FAAD05 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +359,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = kokomap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -352,6 +370,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = kokomap/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -411,6 +430,7 @@
 				DAFBFEFF1B42C6B300FAAD05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAFBFF001B42C6B300FAAD05 /* Build configuration list for PBXNativeTarget "kokomapTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +439,7 @@
 				DAFBFF021B42C6B300FAAD05 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
