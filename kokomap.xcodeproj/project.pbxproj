@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DA6D79271B46D2BE001FF422 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6D79261B46D2BE001FF422 /* NotificationCenter.framework */; };
+		DA6D792C1B46D2BE001FF422 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D792B1B46D2BE001FF422 /* TodayViewController.swift */; };
+		DA6D792E1B46D2BE001FF422 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6D792D1B46D2BE001FF422 /* MainInterface.storyboard */; };
+		DA6D79311B46D2BE001FF422 /* addextension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DA6D79241B46D2BE001FF422 /* addextension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DAFBFEE91B42C6B200FAAD05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFBFEE71B42C6B200FAAD05 /* Main.storyboard */; };
 		DAFBFEEB1B42C6B200FAAD05 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAFBFEEA1B42C6B200FAAD05 /* Images.xcassets */; };
 		DAFBFEEE1B42C6B200FAAD05 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAFBFEEC1B42C6B200FAAD05 /* LaunchScreen.xib */; };
@@ -16,6 +20,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		DA6D792F1B46D2BE001FF422 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = DAFBFED61B42C6B200FAAD05 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DA6D79231B46D2BE001FF422;
+			remoteInfo = AddExtension;
+		};
 		DAFBFEF41B42C6B200FAAD05 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DAFBFED61B42C6B200FAAD05 /* Project object */;
@@ -25,7 +36,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		DA6D79351B46D2BE001FF422 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				DA6D79311B46D2BE001FF422 /* addextension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		DA6D79241B46D2BE001FF422 /* addextension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = addextension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA6D79261B46D2BE001FF422 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
+		DA6D792A1B46D2BE001FF422 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA6D792B1B46D2BE001FF422 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
+		DA6D792D1B46D2BE001FF422 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		DAFBFEDE1B42C6B200FAAD05 /* kokomap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kokomap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFBFEE21B42C6B200FAAD05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAFBFEE81B42C6B200FAAD05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -39,6 +69,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		DA6D79211B46D2BE001FF422 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA6D79271B46D2BE001FF422 /* NotificationCenter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DAFBFEDB1B42C6B200FAAD05 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -56,11 +94,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DA6D79251B46D2BE001FF422 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DA6D79261B46D2BE001FF422 /* NotificationCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA6D79281B46D2BE001FF422 /* AddExtension */ = {
+			isa = PBXGroup;
+			children = (
+				DA6D792B1B46D2BE001FF422 /* TodayViewController.swift */,
+				DA6D792D1B46D2BE001FF422 /* MainInterface.storyboard */,
+				DA6D79291B46D2BE001FF422 /* Supporting Files */,
+			);
+			path = AddExtension;
+			sourceTree = "<group>";
+		};
+		DA6D79291B46D2BE001FF422 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DA6D792A1B46D2BE001FF422 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		DAFBFED51B42C6B200FAAD05 = {
 			isa = PBXGroup;
 			children = (
 				DAFBFEE01B42C6B200FAAD05 /* kokomap */,
 				DAFBFEF61B42C6B200FAAD05 /* kokomapTests */,
+				DA6D79281B46D2BE001FF422 /* AddExtension */,
+				DA6D79251B46D2BE001FF422 /* Frameworks */,
 				DAFBFEDF1B42C6B200FAAD05 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -70,6 +136,7 @@
 			children = (
 				DAFBFEDE1B42C6B200FAAD05 /* kokomap.app */,
 				DAFBFEF31B42C6B200FAAD05 /* kokomapTests.xctest */,
+				DA6D79241B46D2BE001FF422 /* addextension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -131,6 +198,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		DA6D79231B46D2BE001FF422 /* AddExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DA6D79341B46D2BE001FF422 /* Build configuration list for PBXNativeTarget "AddExtension" */;
+			buildPhases = (
+				DA6D79201B46D2BE001FF422 /* Sources */,
+				DA6D79211B46D2BE001FF422 /* Frameworks */,
+				DA6D79221B46D2BE001FF422 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AddExtension;
+			productName = AddExtension;
+			productReference = DA6D79241B46D2BE001FF422 /* addextension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		DAFBFEDD1B42C6B200FAAD05 /* kokomap */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = DAFBFEFD1B42C6B300FAAD05 /* Build configuration list for PBXNativeTarget "kokomap" */;
@@ -138,10 +222,12 @@
 				DAFBFEDA1B42C6B200FAAD05 /* Sources */,
 				DAFBFEDB1B42C6B200FAAD05 /* Frameworks */,
 				DAFBFEDC1B42C6B200FAAD05 /* Resources */,
+				DA6D79351B46D2BE001FF422 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DA6D79301B46D2BE001FF422 /* PBXTargetDependency */,
 			);
 			name = kokomap;
 			productName = kokomap;
@@ -175,6 +261,10 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = droibit;
 				TargetAttributes = {
+					DA6D79231B46D2BE001FF422 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 2M4C25U6D7;
+					};
 					DAFBFEDD1B42C6B200FAAD05 = {
 						CreatedOnToolsVersion = 6.3.2;
 						DevelopmentTeam = 2M4C25U6D7;
@@ -200,11 +290,20 @@
 			targets = (
 				DAFBFEDD1B42C6B200FAAD05 /* kokomap */,
 				DAFBFEF21B42C6B200FAAD05 /* kokomapTests */,
+				DA6D79231B46D2BE001FF422 /* AddExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		DA6D79221B46D2BE001FF422 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA6D792E1B46D2BE001FF422 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DAFBFEDC1B42C6B200FAAD05 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -225,6 +324,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		DA6D79201B46D2BE001FF422 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DA6D792C1B46D2BE001FF422 /* TodayViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		DAFBFEDA1B42C6B200FAAD05 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -245,6 +352,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		DA6D79301B46D2BE001FF422 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DA6D79231B46D2BE001FF422 /* AddExtension */;
+			targetProxy = DA6D792F1B46D2BE001FF422 /* PBXContainerItemProxy */;
+		};
 		DAFBFEF51B42C6B200FAAD05 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DAFBFEDD1B42C6B200FAAD05 /* kokomap */;
@@ -272,6 +384,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		DA6D79321B46D2BE001FF422 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AddExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = addextension;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		DA6D79331B46D2BE001FF422 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = AddExtension/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = addextension;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		DAFBFEFB1B42C6B300FAAD05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -414,6 +554,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		DA6D79341B46D2BE001FF422 /* Build configuration list for PBXNativeTarget "AddExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA6D79321B46D2BE001FF422 /* Debug */,
+				DA6D79331B46D2BE001FF422 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		DAFBFED91B42C6B200FAAD05 /* Build configuration list for PBXProject "kokomap" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
