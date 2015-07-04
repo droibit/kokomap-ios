@@ -8,7 +8,12 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+/**
+ * MKMapViewを表示するためのビューコントローラ
+ *
+ * @author kumagai
+ */
+class MapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +24,5 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
 }
 

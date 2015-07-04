@@ -11,12 +11,14 @@
 		DA6D792C1B46D2BE001FF422 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D792B1B46D2BE001FF422 /* TodayViewController.swift */; };
 		DA6D792E1B46D2BE001FF422 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6D792D1B46D2BE001FF422 /* MainInterface.storyboard */; };
 		DA6D79311B46D2BE001FF422 /* addextension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DA6D79241B46D2BE001FF422 /* addextension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DAAB754B1B482A780040D87B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAAB754D1B482A780040D87B /* Localizable.strings */; };
+		DAF4F4571B482E4A008A7B88 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF4F4561B482E4A008A7B88 /* MapKit.framework */; };
 		DAFBFEE91B42C6B200FAAD05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFBFEE71B42C6B200FAAD05 /* Main.storyboard */; };
 		DAFBFEEB1B42C6B200FAAD05 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAFBFEEA1B42C6B200FAAD05 /* Images.xcassets */; };
 		DAFBFEEE1B42C6B200FAAD05 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAFBFEEC1B42C6B200FAAD05 /* LaunchScreen.xib */; };
 		DAFBFEFA1B42C6B300FAAD05 /* kokomapTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFBFEF91B42C6B200FAAD05 /* kokomapTests.swift */; };
 		DAFBFF181B42C76200FAAD05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFBFF161B42C76200FAAD05 /* AppDelegate.swift */; };
-		DAFBFF191B42C76200FAAD05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFBFF171B42C76200FAAD05 /* ViewController.swift */; };
+		DAFBFF191B42C76200FAAD05 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAFBFF171B42C76200FAAD05 /* MapViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		DA6D792A1B46D2BE001FF422 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA6D792B1B46D2BE001FF422 /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		DA6D792D1B46D2BE001FF422 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
+		DAAB754C1B482A780040D87B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DAF4F4561B482E4A008A7B88 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DAFBFEDE1B42C6B200FAAD05 /* kokomap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kokomap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFBFEE21B42C6B200FAAD05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAFBFEE81B42C6B200FAAD05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -65,7 +69,7 @@
 		DAFBFEF81B42C6B200FAAD05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAFBFEF91B42C6B200FAAD05 /* kokomapTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = kokomapTests.swift; sourceTree = "<group>"; };
 		DAFBFF161B42C76200FAAD05 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DAFBFF171B42C76200FAAD05 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		DAFBFF171B42C76200FAAD05 /* MapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DAF4F4571B482E4A008A7B88 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -97,6 +102,7 @@
 		DA6D79251B46D2BE001FF422 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DAF4F4561B482E4A008A7B88 /* MapKit.framework */,
 				DA6D79261B46D2BE001FF422 /* NotificationCenter.framework */,
 			);
 			name = Frameworks;
@@ -118,6 +124,14 @@
 				DA6D792A1B46D2BE001FF422 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DAAB75481B4827C70040D87B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DAFBFF171B42C76200FAAD05 /* MapViewController.swift */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		DAFBFED51B42C6B200FAAD05 = {
@@ -156,6 +170,7 @@
 				DAFBFF1B1B42C8BE00FAAD05 /* View */,
 				DAFBFEEA1B42C6B200FAAD05 /* Images.xcassets */,
 				DAFBFEE21B42C6B200FAAD05 /* Info.plist */,
+				DAAB754D1B482A780040D87B /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -180,8 +195,8 @@
 		DAFBFF151B42C76200FAAD05 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DAAB75481B4827C70040D87B /* ViewController */,
 				DAFBFF161B42C76200FAAD05 /* AppDelegate.swift */,
-				DAFBFF171B42C76200FAAD05 /* ViewController.swift */,
 			);
 			path = Sources;
 			sourceTree = "<group>";
@@ -258,6 +273,7 @@
 		DAFBFED61B42C6B200FAAD05 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = droibit;
 				TargetAttributes = {
@@ -268,6 +284,11 @@
 					DAFBFEDD1B42C6B200FAAD05 = {
 						CreatedOnToolsVersion = 6.3.2;
 						DevelopmentTeam = 2M4C25U6D7;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					DAFBFEF21B42C6B200FAAD05 = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -309,6 +330,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAFBFEE91B42C6B200FAAD05 /* Main.storyboard in Resources */,
+				DAAB754B1B482A780040D87B /* Localizable.strings in Resources */,
 				DAFBFEEE1B42C6B200FAAD05 /* LaunchScreen.xib in Resources */,
 				DAFBFEEB1B42C6B200FAAD05 /* Images.xcassets in Resources */,
 			);
@@ -337,7 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAFBFF181B42C76200FAAD05 /* AppDelegate.swift in Sources */,
-				DAFBFF191B42C76200FAAD05 /* ViewController.swift in Sources */,
+				DAFBFF191B42C76200FAAD05 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +387,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		DAAB754D1B482A780040D87B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAAB754C1B482A780040D87B /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		DAFBFEE71B42C6B200FAAD05 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -499,8 +529,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = kokomap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -510,8 +542,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = kokomap/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -561,6 +595,7 @@
 				DA6D79331B46D2BE001FF422 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		DAFBFED91B42C6B200FAAD05 /* Build configuration list for PBXProject "kokomap" */ = {
 			isa = XCConfigurationList;

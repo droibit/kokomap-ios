@@ -16,7 +16,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "DA6D79231B46D2BE001FF422"
-               BuildableName = "AddExtension.appex"
+               BuildableName = "addextension.appex"
                BlueprintName = "AddExtension"
                ReferencedContainer = "container:kokomap.xcodeproj">
             </BuildableReference>
@@ -48,7 +48,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "DA6D79231B46D2BE001FF422"
-            BuildableName = "AddExtension.appex"
+            BuildableName = "addextension.appex"
             BlueprintName = "AddExtension"
             ReferencedContainer = "container:kokomap.xcodeproj">
          </BuildableReference>
