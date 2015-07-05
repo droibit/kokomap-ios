@@ -10,7 +10,7 @@ import UIKit
 import MapKit
 
 /**
- * MKMapViewを表示するためのビューコントローラ
+ * 地図機能を提供するためのビューコントローラ
  *
  * @author kumagai
  */
@@ -28,7 +28,13 @@ class MapViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    
     // MARK: Action
+    
+    // Storyboard上で設定画面から戻る場合に必要
+    @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
+        // データを受け渡しする場合はここで行う
+    }
     
     // 現在位置に移動する際に呼ぶアクション
     @IBAction func onMoveCurrentLocation(sender: AnyObject) {

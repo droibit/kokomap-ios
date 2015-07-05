@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		66894799A17183F67C99881E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6653364F00CFF5B29212390D /* libPods.a */; };
+		DA11EC881B49709600C4A238 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11EC871B49709600C4A238 /* SettingsViewController.swift */; };
+		DA11EC8A1B49730600C4A238 /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA11EC891B49730600C4A238 /* Pods-acknowledgements.plist */; };
 		DA6D79271B46D2BE001FF422 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6D79261B46D2BE001FF422 /* NotificationCenter.framework */; };
 		DA6D792C1B46D2BE001FF422 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D792B1B46D2BE001FF422 /* TodayViewController.swift */; };
 		DA6D792E1B46D2BE001FF422 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6D792D1B46D2BE001FF422 /* MainInterface.storyboard */; };
@@ -57,6 +59,8 @@
 		4ECDCC3930F63D7D77C0E28D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		6653364F00CFF5B29212390D /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7E9701CBAB39E4E72EA97507 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		DA11EC871B49709600C4A238 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DA11EC891B49730600C4A238 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-acknowledgements.plist"; path = "Pods/Target Support Files/Pods/Pods-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
 		DA6D79241B46D2BE001FF422 /* addextension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = addextension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA6D79261B46D2BE001FF422 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		DA6D792A1B46D2BE001FF422 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -145,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				DAFBFF171B42C76200FAAD05 /* MapViewController.swift */,
+				DA11EC871B49709600C4A238 /* SettingsViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 				DAFBFEEA1B42C6B200FAAD05 /* Images.xcassets */,
 				DAFBFEE21B42C6B200FAAD05 /* Info.plist */,
 				DAAB754D1B482A780040D87B /* Localizable.strings */,
+				DA11EC891B49730600C4A238 /* Pods-acknowledgements.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -350,6 +356,7 @@
 				DAFBFEE91B42C6B200FAAD05 /* Main.storyboard in Resources */,
 				DAAB754B1B482A780040D87B /* Localizable.strings in Resources */,
 				DAFBFEEE1B42C6B200FAAD05 /* LaunchScreen.xib in Resources */,
+				DA11EC8A1B49730600C4A238 /* Pods-acknowledgements.plist in Resources */,
 				DAFBFEEB1B42C6B200FAAD05 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -411,6 +418,7 @@
 			files = (
 				DAFBFF181B42C76200FAAD05 /* AppDelegate.swift in Sources */,
 				DAFBFF191B42C76200FAAD05 /* MapViewController.swift in Sources */,
+				DA11EC881B49709600C4A238 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
