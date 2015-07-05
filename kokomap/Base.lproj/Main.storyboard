@@ -16,19 +16,55 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Qn8-MF-iJy">
-                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qn8-MF-iJy">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1xe-mx-bCk"/>
+                                </connections>
                             </mapView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZE-Up-yt2">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <items>
+                                    <barButtonItem image="ToolMyLocation" style="plain" id="T41-LC-3ck">
+                                        <connections>
+                                            <action selector="onMoveCurrentLocation:" destination="BYZ-38-t0r" id="6wF-uf-uf6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="JWI-XB-eLK"/>
+                                    <barButtonItem image="ToolAddMarker" id="aVg-x4-gkd">
+                                        <connections>
+                                            <action selector="onAddMarker:" destination="BYZ-38-t0r" id="33J-FA-mQ6"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="eDA-Cp-kKk"/>
+                                    <barButtonItem image="ToolChangeMapType" id="gbq-eW-5H4">
+                                        <connections>
+                                            <action selector="onChangeMapType:" destination="BYZ-38-t0r" id="HTE-be-i9a"/>
+                                        </connections>
+                                    </barButtonItem>
+                                </items>
+                            </toolbar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Qn8-MF-iJy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7Ij-t5-1Lt"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YZE-Up-yt2" secondAttribute="bottom" id="BWc-c6-ojT"/>
                             <constraint firstAttribute="trailing" secondItem="Qn8-MF-iJy" secondAttribute="trailing" id="Ftk-Nf-3Vr"/>
+                            <constraint firstItem="YZE-Up-yt2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="P2l-i3-QmA"/>
+                            <constraint firstItem="YZE-Up-yt2" firstAttribute="top" secondItem="Qn8-MF-iJy" secondAttribute="bottom" id="axr-AP-Tfk"/>
+                            <constraint firstAttribute="trailing" secondItem="YZE-Up-yt2" secondAttribute="trailing" id="biU-6c-PUM"/>
                             <constraint firstItem="Qn8-MF-iJy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hSj-Gj-7Kh"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Qn8-MF-iJy" secondAttribute="bottom" id="zwf-Hv-8pl"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="zwf-Hv-8pl"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <navigationItem key="navigationItem" title="KOKO MAP" id="ejE-d4-eEA"/>
+                    <navigationItem key="navigationItem" title="KOKO MAP" id="ejE-d4-eEA">
+                        <barButtonItem key="leftBarButtonItem" image="NavSettings" style="plain" id="kl9-Qx-aNi"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -53,4 +89,10 @@
             <point key="canvasLocation" x="460" y="1050"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="NavSettings" width="22" height="22"/>
+        <image name="ToolAddMarker" width="22" height="22"/>
+        <image name="ToolChangeMapType" width="22" height="22"/>
+        <image name="ToolMyLocation" width="22" height="22"/>
+    </resources>
 </document>
