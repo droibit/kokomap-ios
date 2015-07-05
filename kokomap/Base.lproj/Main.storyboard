@@ -7,7 +7,7 @@
         <!--Settings-->
         <scene sceneID="jbf-Eh-8DJ">
             <objects>
-                <tableViewController id="RZX-JD-j2V" sceneMemberID="viewController">
+                <tableViewController id="RZX-JD-j2V" customClass="SettingsViewController" customModule="kokomap" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="ga6-4B-gnW">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -65,9 +65,9 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="AcT-To-ORc">
-                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="hFq-B8-wvN">
+                        <barButtonItem key="leftBarButtonItem" title="Close" style="plain" id="hFq-B8-wvN">
                             <connections>
-                                <segue destination="LWm-zr-TUJ" kind="unwind" unwindAction="prepareForUnwind:" id="btC-9X-wON"/>
+                                <segue destination="LWm-zr-TUJ" kind="unwind" unwindAction="prepareForUnwind:" id="CVH-Ig-ghS"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -124,7 +124,7 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YZE-Up-yt2">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
-                                    <barButtonItem image="ToolMyLocation" style="plain" id="T41-LC-3ck">
+                                    <barButtonItem image="ToolMyLocation" id="T41-LC-3ck">
                                         <connections>
                                             <action selector="onMoveCurrentLocation:" destination="BYZ-38-t0r" id="6wF-uf-uf6"/>
                                         </connections>
@@ -162,9 +162,9 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="KOKO MAP" id="ejE-d4-eEA">
-                        <barButtonItem key="leftBarButtonItem" image="NavSettings" style="plain" id="kl9-Qx-aNi">
+                        <barButtonItem key="leftBarButtonItem" image="NavSettings" id="kl9-Qx-aNi">
                             <connections>
-                                <segue destination="djd-oL-JVy" kind="presentation" id="1aq-5o-eMM"/>
+                                <segue destination="djd-oL-JVy" kind="presentation" identifier="Settings" modalPresentationStyle="formSheet" id="1aq-5o-eMM"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -207,7 +207,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4ws-sz-cdF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1886" y="10"/>
+            <point key="canvasLocation" x="1896" y="10"/>
         </scene>
     </scenes>
     <resources>

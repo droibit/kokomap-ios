@@ -33,7 +33,12 @@ class MapViewController: UIViewController {
     
     // Storyboard上で設定画面から戻る場合に必要
     @IBAction func prepareForUnwind(segue: UIStoryboardSegue) {
-        // データを受け渡しする場合はここで行う
+        // iPadの場合FormSheet形式で表示するとunwind segueが上手く動作しなかったので明示的に消す
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+            if let settings = segue.sourceViewController as? SettingsViewController {
+                settings.dismissViewControllerAnimated(true, completion: nil)
+            }
+        }
     }
     
     // 現在位置に移動する際に呼ぶアクション
