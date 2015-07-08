@@ -10,6 +10,8 @@ import UIKit
 import MapKit
 import CoreLocation
 
+private let kAnnotationId = "pin"
+
 /**
  * 地図機能を提供するためのビューコントローラ
  *
@@ -23,7 +25,7 @@ class MapViewController: UIViewController {
     /// 現在位置情報（ボタン押下の都度ではなく、取得した位置を保持し、押下のタイミングで地図に設定）
     private var currentLocation: CLLocation? = nil
     /// マーカーを落とす座標（地図の中心）
-    private var mapCenterCoordinate: CLLocationCoordinate2D? = nil
+    private var mapCenterCoordinate: CLLocationCoordinate2D = kCLLocationCoordinate2DInvalid
     
     // MARK: Initializer
     
@@ -83,6 +85,7 @@ extension MapViewController {
     func presentAdditionalMarkerActionSheet() {
         let actionSheet = makeActionSheet(title: "ActionSheetTitleDropMarker")
         actionSheet.addDefaultAction(title: NSLocalizedString("ActionSheetDropMarkerOnly", comment: "")) { _ in
+            self.dropMarkerInCenterMap()
         }
         actionSheet.addDefaultAction(title: NSLocalizedString("ActionSheetDropMarkerAndBalloon", comment: "")) { _ in
         }
@@ -127,6 +130,35 @@ extension MapViewController: MKMapViewDelegate {
         
         NSLog("\(mapView.region.center.latitude), \(mapView.region.center.longitude)")
     }
+    
+    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+        if (annotation is MKUserLocation) {
+            return nil
+        }
+        
+        // ピンは一個だけなので再利用できる場合は再利用する
+        var annotationView = mapView.dequeueReusableAnnotationViewWithIdentifier(kAnnotationId) as? MKPinAnnotationView
+        if let recycledView = annotationView {
+            recycledView.annotation = annotation
+        } else {
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: kAnnotationId)
+        }
+        
+        // アノテーションのサブタイトルが入力されている場合は表示する
+        if annotation.subtitle != nil {
+            annotationView!.canShowCallout = true
+        }
+        return annotationView
+    }
+    
+    func mapView(mapView: MKMapView!, didAddAnnotationViews views: [AnyObject]!) {
+        
+    }
+    
+    private func dropMarkerInCenterMap(annotationSubtitle: String? = nil) {
+        let annotation = Annotation(coordinate: mapCenterCoordinate)
+        mapView.addAnnotation(annotation)
+    }
 }
 
 // MARK: - CLLocationManager Delegate
@@ -148,10 +180,11 @@ extension MapViewController: CLLocationManagerDelegate {
     
     func locationManager(manager: CLLocationManager!, didUpdateLocations locations: [AnyObject]!) {
         if let location = locations[0] as? CLLocation {
-            // TODO: ズーム率の調整
-            // 初回起動時のみ現在位置へ地図を移動させる
-            if currentLocation != nil {
-                mapView.setCenterCoordinate(location.coordinate, animated: true)
+            // 初回起動時のみズームしながら現在位置へ地図を移動させる
+            if currentLocation == nil {
+                let span = MKCoordinateSpanMake(0.05, 0.05)
+                let region = MKCoordinateRegionMake(location.coordinate, span)
+                mapView.setRegion(region, animated: true)
             }
             currentLocation = location
         }

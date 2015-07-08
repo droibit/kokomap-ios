@@ -14,6 +14,7 @@
 		DA11EC911B4AC35500C4A238 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA11EC901B4AC35500C4A238 /* CoreLocation.framework */; };
 		DA11EC971B4AC59C00C4A238 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA11EC951B4AC59C00C4A238 /* InfoPlist.strings */; };
 		DA11EC9A1B4AC68E00C4A238 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA11EC991B4AC68E00C4A238 /* Info.plist */; };
+		DA11EC9D1B4D69FD00C4A238 /* Annotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11EC9C1B4D69FD00C4A238 /* Annotation.swift */; };
 		DA6D79271B46D2BE001FF422 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6D79261B46D2BE001FF422 /* NotificationCenter.framework */; };
 		DA6D792C1B46D2BE001FF422 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D792B1B46D2BE001FF422 /* TodayViewController.swift */; };
 		DA6D792E1B46D2BE001FF422 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6D792D1B46D2BE001FF422 /* MainInterface.storyboard */; };
@@ -72,6 +73,7 @@
 		DA11EC961B4AC59C00C4A238 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DA11EC981B4AC5A500C4A238 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DA11EC991B4AC68E00C4A238 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DA11EC9C1B4D69FD00C4A238 /* Annotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Annotation.swift; sourceTree = "<group>"; };
 		DA6D79241B46D2BE001FF422 /* addextension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = addextension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA6D79261B46D2BE001FF422 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		DA6D792A1B46D2BE001FF422 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -135,6 +137,14 @@
 			);
 			name = Extention;
 			path = ..;
+			sourceTree = "<group>";
+		};
+		DA11EC9B1B4D69ED00C4A238 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				DA11EC9C1B4D69FD00C4A238 /* Annotation.swift */,
+			);
+			name = Entity;
 			sourceTree = "<group>";
 		};
 		DA6D79251B46D2BE001FF422 /* Frameworks */ = {
@@ -239,6 +249,7 @@
 		DAFBFF151B42C76200FAAD05 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DA11EC9B1B4D69ED00C4A238 /* Entity */,
 				DA11EC8B1B4AB52C00C4A238 /* Extention */,
 				DAAB75481B4827C70040D87B /* ViewController */,
 				DAFBFF161B42C76200FAAD05 /* AppDelegate.swift */,
@@ -443,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA11EC8D1B4AB58D00C4A238 /* UIAlertControllerExtension.swift in Sources */,
+				DA11EC9D1B4D69FD00C4A238 /* Annotation.swift in Sources */,
 				DAFBFF181B42C76200FAAD05 /* AppDelegate.swift in Sources */,
 				DAFBFF191B42C76200FAAD05 /* MapViewController.swift in Sources */,
 				DA11EC881B49709600C4A238 /* SettingsViewController.swift in Sources */,

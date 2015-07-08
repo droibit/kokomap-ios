@@ -5,3 +5,19 @@
   Created by kumagai on 2015/07/04.
   Copyright (c) 2015年 droibit. All rights reserved.
 */
+
+"ActionSheetTitleMapType"="地図の種類";
+"ActionSheetMapTypeStandard"="標準";
+"ActionSheetMapTypeSatellite"="航空写真";
+
+/** AppleMapでは"ピン"だったので表記はそれで */
+"ActionSheetTitleDropMarker"="ピンをドロップ";
+"ActionSheetDropMarkerOnly"="ピンのみ";
+"ActionSheetDropMarkerAndBalloon"="ピンと吹き出し";
+
+"AlertMessageDisabledLocationService"="現在位置へ移動するためには\nロケーションサービスを有効にする必要があります。";
+
+"AlertActionTitleSettings"="設定";
+"AlertActionCancel"="キャンセル";
+
+"AnnotationTitle"="ココ";
