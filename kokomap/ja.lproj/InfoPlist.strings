@@ -1,0 +1,11 @@
+/* 
+  InfoPlist.strings
+  kokomap
+
+  Created by kumagai on 2015/07/06.
+  Copyright (c) 2015年 droibit. All rights reserved.
+*/
+
+CFBundleDisplayName = "ココマップ";
+
+"NSLocationWhenInUseUsageDescription"="地図上で現在地へ移動する際に\n必要とします";

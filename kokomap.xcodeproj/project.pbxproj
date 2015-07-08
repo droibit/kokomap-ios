@@ -10,6 +10,10 @@
 		66894799A17183F67C99881E /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6653364F00CFF5B29212390D /* libPods.a */; };
 		DA11EC881B49709600C4A238 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11EC871B49709600C4A238 /* SettingsViewController.swift */; };
 		DA11EC8A1B49730600C4A238 /* Pods-acknowledgements.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA11EC891B49730600C4A238 /* Pods-acknowledgements.plist */; };
+		DA11EC8D1B4AB58D00C4A238 /* UIAlertControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA11EC8C1B4AB58D00C4A238 /* UIAlertControllerExtension.swift */; };
+		DA11EC911B4AC35500C4A238 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA11EC901B4AC35500C4A238 /* CoreLocation.framework */; };
+		DA11EC971B4AC59C00C4A238 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA11EC951B4AC59C00C4A238 /* InfoPlist.strings */; };
+		DA11EC9A1B4AC68E00C4A238 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DA11EC991B4AC68E00C4A238 /* Info.plist */; };
 		DA6D79271B46D2BE001FF422 /* NotificationCenter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA6D79261B46D2BE001FF422 /* NotificationCenter.framework */; };
 		DA6D792C1B46D2BE001FF422 /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA6D792B1B46D2BE001FF422 /* TodayViewController.swift */; };
 		DA6D792E1B46D2BE001FF422 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA6D792D1B46D2BE001FF422 /* MainInterface.storyboard */; };
@@ -61,6 +65,13 @@
 		7E9701CBAB39E4E72EA97507 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		DA11EC871B49709600C4A238 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		DA11EC891B49730600C4A238 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "Pods-acknowledgements.plist"; path = "Pods/Target Support Files/Pods/Pods-acknowledgements.plist"; sourceTree = SOURCE_ROOT; };
+		DA11EC8C1B4AB58D00C4A238 /* UIAlertControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIAlertControllerExtension.swift; path = Sources/UIAlertControllerExtension.swift; sourceTree = "<group>"; };
+		DA11EC8E1B4AB5B700C4A238 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DA11EC8F1B4AB5B700C4A238 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Main.strings; sourceTree = "<group>"; };
+		DA11EC901B4AC35500C4A238 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DA11EC961B4AC59C00C4A238 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA11EC981B4AC5A500C4A238 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA11EC991B4AC68E00C4A238 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DA6D79241B46D2BE001FF422 /* addextension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = addextension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA6D79261B46D2BE001FF422 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		DA6D792A1B46D2BE001FF422 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -69,7 +80,6 @@
 		DAAB754C1B482A780040D87B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DAF4F4561B482E4A008A7B88 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DAFBFEDE1B42C6B200FAAD05 /* kokomap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kokomap.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		DAFBFEE21B42C6B200FAAD05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DAFBFEE81B42C6B200FAAD05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAFBFEEA1B42C6B200FAAD05 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		DAFBFEED1B42C6B200FAAD05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -93,6 +103,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA11EC911B4AC35500C4A238 /* CoreLocation.framework in Frameworks */,
 				DAF4F4571B482E4A008A7B88 /* MapKit.framework in Frameworks */,
 				66894799A17183F67C99881E /* libPods.a in Frameworks */,
 			);
@@ -117,9 +128,19 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		DA11EC8B1B4AB52C00C4A238 /* Extention */ = {
+			isa = PBXGroup;
+			children = (
+				DA11EC8C1B4AB58D00C4A238 /* UIAlertControllerExtension.swift */,
+			);
+			name = Extention;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		DA6D79251B46D2BE001FF422 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA11EC901B4AC35500C4A238 /* CoreLocation.framework */,
 				DAF4F4561B482E4A008A7B88 /* MapKit.framework */,
 				DA6D79261B46D2BE001FF422 /* NotificationCenter.framework */,
 				6653364F00CFF5B29212390D /* libPods.a */,
@@ -181,6 +202,7 @@
 			children = (
 				DAFBFF151B42C76200FAAD05 /* Sources */,
 				DAFBFEE11B42C6B200FAAD05 /* Supporting Files */,
+				DA11EC891B49730600C4A238 /* Pods-acknowledgements.plist */,
 			);
 			path = kokomap;
 			sourceTree = "<group>";
@@ -190,9 +212,9 @@
 			children = (
 				DAFBFF1B1B42C8BE00FAAD05 /* View */,
 				DAFBFEEA1B42C6B200FAAD05 /* Images.xcassets */,
-				DAFBFEE21B42C6B200FAAD05 /* Info.plist */,
+				DA11EC991B4AC68E00C4A238 /* Info.plist */,
 				DAAB754D1B482A780040D87B /* Localizable.strings */,
-				DA11EC891B49730600C4A238 /* Pods-acknowledgements.plist */,
+				DA11EC951B4AC59C00C4A238 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -217,6 +239,7 @@
 		DAFBFF151B42C76200FAAD05 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DA11EC8B1B4AB52C00C4A238 /* Extention */,
 				DAAB75481B4827C70040D87B /* ViewController */,
 				DAFBFF161B42C76200FAAD05 /* AppDelegate.swift */,
 			);
@@ -327,6 +350,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = DAFBFED51B42C6B200FAAD05;
 			productRefGroup = DAFBFEDF1B42C6B200FAAD05 /* Products */;
@@ -354,10 +378,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				DAFBFEE91B42C6B200FAAD05 /* Main.storyboard in Resources */,
+				DA11EC971B4AC59C00C4A238 /* InfoPlist.strings in Resources */,
 				DAAB754B1B482A780040D87B /* Localizable.strings in Resources */,
 				DAFBFEEE1B42C6B200FAAD05 /* LaunchScreen.xib in Resources */,
 				DA11EC8A1B49730600C4A238 /* Pods-acknowledgements.plist in Resources */,
 				DAFBFEEB1B42C6B200FAAD05 /* Images.xcassets in Resources */,
+				DA11EC9A1B4AC68E00C4A238 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +442,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA11EC8D1B4AB58D00C4A238 /* UIAlertControllerExtension.swift in Sources */,
 				DAFBFF181B42C76200FAAD05 /* AppDelegate.swift in Sources */,
 				DAFBFF191B42C76200FAAD05 /* MapViewController.swift in Sources */,
 				DA11EC881B49709600C4A238 /* SettingsViewController.swift in Sources */,
@@ -446,10 +473,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		DA11EC951B4AC59C00C4A238 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DA11EC961B4AC59C00C4A238 /* Base */,
+				DA11EC981B4AC5A500C4A238 /* ja */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		DAAB754D1B482A780040D87B /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DAAB754C1B482A780040D87B /* Base */,
+				DA11EC8E1B4AB5B700C4A238 /* ja */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -458,6 +495,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				DAFBFEE81B42C6B200FAAD05 /* Base */,
+				DA11EC8F1B4AB5B700C4A238 /* ja */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -537,7 +575,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -576,7 +614,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

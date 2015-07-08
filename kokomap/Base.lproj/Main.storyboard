@@ -65,7 +65,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Settings" id="AcT-To-ORc">
-                        <barButtonItem key="leftBarButtonItem" title="Close" style="plain" id="hFq-B8-wvN">
+                        <barButtonItem key="leftBarButtonItem" title="Close" style="done" id="hFq-B8-wvN">
                             <connections>
                                 <segue destination="LWm-zr-TUJ" kind="unwind" unwindAction="prepareForUnwind:" id="CVH-Ig-ghS"/>
                             </connections>
@@ -86,7 +86,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Tee-4F-i3I">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="Tee-4F-i3I">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Tee-4F-i3I" id="ORF-3u-NYc">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -168,6 +168,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="mapView" destination="Qn8-MF-iJy" id="eBR-c3-fhf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
