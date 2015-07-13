@@ -18,6 +18,9 @@
 "AlertMessageDisabledLocationService"="現在位置へ移動するためには\nロケーションサービスを有効にする必要があります。";
 
 "AlertActionTitleSettings"="設定";
+"AlertActionOK"="OK";
 "AlertActionCancel"="キャンセル";
 
 "AnnotationTitle"="ココ";
+"AnnotationSubtitleTitle"="吹き出しの内容";
+"AnnotationSubtitlePlaceholder"="最大25文字";

@@ -11,6 +11,7 @@ import MapKit
 import CoreLocation
 
 private let kAnnotationId = "pin"
+private let kMaxAlertSubtitleLength = 25
 
 /**
  * 地図機能を提供するためのビューコントローラ
@@ -77,17 +78,18 @@ class MapViewController: UIViewController {
 }
 
 // MARK: - ActionSheet
-extension MapViewController {
+extension MapViewController: UITextFieldDelegate {
  
     /**
      追加するマーカーの種類を選択するためのアクションシートを表示する。
     */
-    func presentAdditionalMarkerActionSheet() {
-        let actionSheet = makeActionSheet(title: "ActionSheetTitleDropMarker")
+    private func presentAdditionalMarkerActionSheet() {
+        let actionSheet = UIAlertController.actionSheetWithTitle(title: "ActionSheetTitleDropMarker")
         actionSheet.addDefaultAction(title: NSLocalizedString("ActionSheetDropMarkerOnly", comment: "")) { _ in
             self.dropMarkerInCenterMap()
         }
         actionSheet.addDefaultAction(title: NSLocalizedString("ActionSheetDropMarkerAndBalloon", comment: "")) { _ in
+            self.presentBalloonSubtitleAlert()
         }
         actionSheet.addCancelAction(title: NSLocalizedString("AlertActionCancel", comment: ""), handler: nil)
         
@@ -97,8 +99,8 @@ extension MapViewController {
     /**
     地図の種類を切り替えるためのアクションシートを表示する。
     */
-    func presentMapTypeActionSheet() {
-        let actionSheet = makeActionSheet(title: "ActionSheetTitleMapType")
+    private func presentMapTypeActionSheet() {
+        let actionSheet = UIAlertController.actionSheetWithTitle(title: "ActionSheetTitleMapType")
         // 変更先の地図の種類のみ表示する
         if mapView.mapType == MKMapType.Standard {
             actionSheet.addDefaultAction(title: NSLocalizedString("ActionSheetMapTypeSatellite", comment: "")) { _ in
@@ -112,6 +114,51 @@ extension MapViewController {
         actionSheet.addCancelAction(title: NSLocalizedString("AlertActionCancel", comment: ""), handler: nil)
         
         presentViewController(actionSheet, animated: true, completion: nil)
+    }
+    
+    private func presentSettingsAlertController() {
+        let alert = UIAlertController.settingsAlertWithMessage("AlertActionTitleSettings")
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    /**
+    吹き出しの内容を入力するためのアラートを表示する
+    
+    :param: targetView 入力後に吹き出しを表示する対象
+    */
+    private func presentBalloonSubtitleAlert() {
+        let alert = UIAlertController.alertWithTitle(title: "AnnotationSubtitleTitle")
+        alert.addCancelAction(title: NSLocalizedString("AlertActionCancel", comment: ""), handler: nil)
+        alert.addDefaultAction(title: NSLocalizedString("AlertActionOK", comment: "")) { action in
+            // 入力が確定したらピンを落とす
+            if let textField = alert.textFields?.first as? UITextField {
+                if textField.text.isEmpty {
+                    return
+                }
+                self.dropMarkerInCenterMap(annotationSubtitle: textField.text)
+            }
+        }
+        
+        alert.addTextFieldWithConfigurationHandler() { textField in
+            textField.returnKeyType = .Done
+            textField.selectAll(self)
+            textField.placeholder = NSLocalizedString("AnnotationSubtitlePlaceholder", comment: "")
+            textField.delegate = self
+        }
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    // MARK: UITextField Delegate
+    
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
+        var text = textField.text as NSString
+        text = text.stringByReplacingCharactersInRange(range, withString: string)
+        // 最大25文字で制限
+        return text.length <= kMaxAlertSubtitleLength
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        return !textField.text.isEmpty
     }
 }
 
@@ -146,18 +193,33 @@ extension MapViewController: MKMapViewDelegate {
         
         // アノテーションのサブタイトルが入力されている場合は表示する
         if annotation.subtitle != nil {
-            annotationView!.canShowCallout = true
+            annotationView?.canShowCallout = true
         }
         return annotationView
     }
     
     func mapView(mapView: MKMapView!, didAddAnnotationViews views: [AnyObject]!) {
+        if views.isEmpty {
+            return
+        }
         
+        // サブタイトルが入力されている場合は表示する
+        let annotationView = views.first as! MKAnnotationView
+        if let annotation = annotationView.annotation as? Annotation {
+            if annotation.hasSubtitle {
+                mapView.selectAnnotation(annotationView.annotation, animated: false)
+            }
+            snapshotMapView()
+        }
     }
     
     private func dropMarkerInCenterMap(annotationSubtitle: String? = nil) {
-        let annotation = Annotation(coordinate: mapCenterCoordinate)
+        let annotation = Annotation(coordinate: mapCenterCoordinate, subtitle: annotationSubtitle)
         mapView.addAnnotation(annotation)
+    }
+    
+    private func snapshotMapView() {
+        // TODO: 遅延入れたほうがいいかも
     }
 }
 
@@ -195,7 +257,7 @@ extension MapViewController: CLLocationManagerDelegate {
             case .NotDetermined:
                 manager.requestWhenInUseAuthorization()
             case .Restricted, .Denied:
-                presentSettingsAlertWithMessage(NSLocalizedString("AlertMessageDisabledLocationService", comment: ""))
+                presentSettingsAlertController()
             case .AuthorizedWhenInUse:
                 startUpdatingLocation()
             default:
@@ -227,26 +289,4 @@ extension MapViewController: CLLocationManagerDelegate {
 // MARK: - Helper
 extension MapViewController {
     
-    // MARK: Extension Methods
-    
-    /**
-    設定画面を開くためのアラートを表示する
-    
-    :param: message アラートのメッセージ
-    */
-    private func presentSettingsAlertWithMessage(message: String) {
-        let alert = UIAlertController(title: "", message: message, preferredStyle: .Alert)        
-        alert.addCancelAction(title: NSLocalizedString("AlertActionCancel", comment: ""), handler: nil)
-        alert.addDefaultAction(title: NSLocalizedString("AlertActionTitleSettings", comment: "")) { action in
-            let url = NSURL(string: UIApplicationOpenSettingsURLString)!
-            UIApplication.sharedApplication().openURL(url)
-        }
-        presentViewController(alert, animated: true, completion: nil)
-    }
-    
-    private func makeActionSheet(#title: String) -> UIAlertController {
-        return UIAlertController(title: NSLocalizedString(title, comment: ""),
-                               message: nil,
-                        preferredStyle: .ActionSheet)
-    }
 }

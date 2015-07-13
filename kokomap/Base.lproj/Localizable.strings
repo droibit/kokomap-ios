@@ -18,6 +18,9 @@
 "AlertMessageDisabledLocationService"="You need to enable location services in order to get the current position.";
 
 "AlertActionTitleSettings"="Settings";
+"AlertActionOK"="OK";
 "AlertActionCancel"="Cancel";
 
 "AnnotationTitle"="Here";
+"AnnotationSubtitleTitle"="Contents of the balloon";
+"AnnotationSubtitlePlaceholder"="Maximum of 25 characters";

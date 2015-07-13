@@ -18,7 +18,45 @@ import UIKit
 */
 extension UIAlertController {
     
-    // MARK: Extenstion Methods
+    /**
+    アプリの設定画面を表示するためUIAlertControllerを作成する
+    
+    :param: message アラートメッセージのキー
+    :return: アラートスタイルのUIAlertController
+    */
+    public class func settingsAlertWithMessage(message: String) -> UIAlertController {
+        let alert = UIAlertController(title: "", message: message, preferredStyle: .Alert)
+        alert.addCancelAction(title: NSLocalizedString("AlertActionCancel", comment: ""), handler: nil)
+        alert.addDefaultAction(title: NSLocalizedString("AlertActionTitleSettings", comment: "")) { action in
+            let url = NSURL(string: UIApplicationOpenSettingsURLString)!
+            UIApplication.sharedApplication().openURL(url)
+        }
+        return alert
+    }
+
+    /**
+    タイトルを指定してアクションシートスタイルのUIAlertControllerを作成する
+    
+    :param: title アクションシートタイトルのキー
+    :return: アクションシートスタイルのUIAlertController
+    */
+    public class func actionSheetWithTitle(#title: String) -> UIAlertController {
+        return UIAlertController(title: NSLocalizedString(title, comment: ""),
+            message: nil,
+            preferredStyle: .ActionSheet)
+    }
+
+    /**
+    タイトルを指定してアラートスタイルのUIAlertControllerを作成する
+    
+    :param: title アラートタイトルのキー
+    :return: アラートスタイルのUIAlertController
+    */
+    public class func alertWithTitle(#title: String) -> UIAlertController {
+        return UIAlertController(title: NSLocalizedString(title, comment: ""),
+            message: nil,
+            preferredStyle: .Alert)
+    }
     
     /**
     DefaultスタイルのUIAlertActionを追加する。

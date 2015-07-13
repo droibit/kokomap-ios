@@ -15,6 +15,11 @@ class Annotation: NSObject, MKAnnotation {
     var title: String?
     var subtitle: String?
     
+    
+    var hasSubtitle: Bool {
+        return subtitle != nil
+    }
+    
     override var description: String {
         return title!
     }
