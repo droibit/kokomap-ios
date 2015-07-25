@@ -11,7 +11,7 @@
 "ActionSheetMapTypeSatellite"="Satellite";
 
 /** AppleMapでは"ピン"だったので表記はそれで */
-"ActionSheetTitleDropMarker"="Drop a Pin";
+"ActionSheetTitleDropMarker"="Drop a pin in center of the map";
 "ActionSheetDropMarkerOnly"="Pin Only";
 "ActionSheetDropMarkerAndBalloon"="Pin and Balloon";
 
@@ -24,3 +24,7 @@
 "AnnotationTitle"="Here";
 "AnnotationSubtitleTitle"="Contents of the balloon";
 "AnnotationSubtitlePlaceholder"="Maximum of 25 characters";
+
+"HUDSavedSnapshotProgress"="Saving...";
+"HUDSavedSnapshotSuccess"="Succeeded to save the map image.";
+"HUDSavedSnapshotFailed"="Failed to save the map image";

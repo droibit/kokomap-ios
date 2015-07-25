@@ -14,15 +14,15 @@ private let kAnnotationId = "pin"
 private let kMaxAlertSubtitleLength = 25
 
 /**
- * 地図機能を提供するためのビューコントローラ
- *
- * @author kumagai
+ 地図機能を提供するためのビューコントローラ
  */
 class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     
     private let locationManager = CLLocationManager()
+    private var snapshotter: Snapshotter!
+    
     /// 現在位置情報（ボタン押下の都度ではなく、取得した位置を保持し、押下のタイミングで地図に設定）
     private var currentLocation: CLLocation? = nil
     /// マーカーを落とす座標（地図の中心）
@@ -88,9 +88,10 @@ extension MapViewController: UITextFieldDelegate {
         actionSheet.addDefaultAction(title: NSLocalizedString("ActionSheetDropMarkerOnly", comment: "")) { _ in
             self.dropMarkerInCenterMap()
         }
-        actionSheet.addDefaultAction(title: NSLocalizedString("ActionSheetDropMarkerAndBalloon", comment: "")) { _ in
-            self.presentBalloonSubtitleAlert()
-        }
+// 吹き出しを画像化できない模様なので表示しない
+//        actionSheet.addDefaultAction(title: NSLocalizedString("ActionSheetDropMarkerAndBalloon", comment: "")) { _ in
+//            self.presentBalloonSubtitleAlert()
+//        }
         actionSheet.addCancelAction(title: NSLocalizedString("AlertActionCancel", comment: ""), handler: nil)
         
         presentViewController(actionSheet, animated: true, completion: nil)
@@ -163,13 +164,14 @@ extension MapViewController: UITextFieldDelegate {
 }
 
 // MARK: - MKMapView Delegate
-extension MapViewController: MKMapViewDelegate {
+extension MapViewController: MKMapViewDelegate, PhotosAlbumDelegate {
     
     /**
     MapViewの初期設定を行う
     */
     func setupMapView() {
         mapView.delegate = self
+        snapshotter = Snapshotter(target: mapView, delegate: self)
     }
     
     func mapView(mapView: MKMapView!, regionDidChangeAnimated animated: Bool) {
@@ -209,7 +211,7 @@ extension MapViewController: MKMapViewDelegate {
             if annotation.hasSubtitle {
                 mapView.selectAnnotation(annotationView.annotation, animated: false)
             }
-            snapshotMapView()
+            snapshotMapView(dropedAnnotation: annotation)
         }
     }
     
@@ -218,8 +220,25 @@ extension MapViewController: MKMapViewDelegate {
         mapView.addAnnotation(annotation)
     }
     
-    private func snapshotMapView() {
+    private func snapshotMapView(#dropedAnnotation: MKAnnotation) {
+        SVProgressHUD.showWithStatus(NSLocalizedString("HUDSavedSnapshotProgress", comment: ""))
+        
         // TODO: 遅延入れたほうがいいかも
+        snapshotter.start(dropedAnnotation)
+    }
+    
+    // MARK: Photos Album Delegate
+    
+    func savedPhotosAlbumError(error: NSError?, droppedAnnotation annotation: MKAnnotation) {
+        var msg: String
+        if error == nil {
+            msg = NSLocalizedString("HUDSavedSnapshotSuccess", comment: "")
+        } else {
+            msg = NSLocalizedString("HUDSavedSnapshotFailed", comment: "")
+        }
+        SVProgressHUD.showSuccessWithStatus(msg)
+        
+        mapView.removeAnnotation(annotation)
     }
 }
 

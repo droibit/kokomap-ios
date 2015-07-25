@@ -9,6 +9,10 @@
 import Foundation
 import MapKit
 
+/**
+MKAnnotationプロトコルの実装。
+タイトルは「ココ」（ローカライズ有）固定でサブタイトルはオプション。
+*/
 class Annotation: NSObject, MKAnnotation {
     
     var coordinate: CLLocationCoordinate2D

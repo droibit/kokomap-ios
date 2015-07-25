@@ -11,8 +11,8 @@
 "ActionSheetMapTypeSatellite"="航空写真";
 
 /** AppleMapでは"ピン"だったので表記はそれで */
-"ActionSheetTitleDropMarker"="ピンをドロップ";
-"ActionSheetDropMarkerOnly"="ピンのみ";
+"ActionSheetTitleDropMarker"="地図の中心にピンをドロップします";
+"ActionSheetDropMarkerOnly"="ピンをドロップ";
 "ActionSheetDropMarkerAndBalloon"="ピンと吹き出し";
 
 "AlertMessageDisabledLocationService"="現在位置へ移動するためには\nロケーションサービスを有効にする必要があります。";
@@ -24,3 +24,7 @@
 "AnnotationTitle"="ココ";
 "AnnotationSubtitleTitle"="吹き出しの内容";
 "AnnotationSubtitlePlaceholder"="最大25文字";
+
+"HUDSavedSnapshotProgress"="保存中...";
+"HUDSavedSnapshotSuccess"="地図画像の保存に成功";
+"HUDSavedSnapshotFailed"="地図画像の保存に失敗";

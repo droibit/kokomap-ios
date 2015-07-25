@@ -10,11 +10,7 @@ import Foundation
 import UIKit
 
 /**
-* @brief UIAlertActionをカンタンに追加するための拡張
-*
-* @author kumagai
-* @since 2014/09/23
-* @version 1.0.0
+* UIAlertActionをカンタンに追加するための拡張
 */
 extension UIAlertController {
     
@@ -33,6 +29,8 @@ extension UIAlertController {
         }
         return alert
     }
+    
+    
 
     /**
     タイトルを指定してアクションシートスタイルのUIAlertControllerを作成する
@@ -40,8 +38,8 @@ extension UIAlertController {
     :param: title アクションシートタイトルのキー
     :return: アクションシートスタイルのUIAlertController
     */
-    public class func actionSheetWithTitle(#title: String) -> UIAlertController {
-        return UIAlertController(title: NSLocalizedString(title, comment: ""),
+    public class func actionSheetWithTitle(title: String? = nil) -> UIAlertController {
+        return UIAlertController(title: title != nil ? NSLocalizedString(title!, comment: "") : title,
             message: nil,
             preferredStyle: .ActionSheet)
     }
