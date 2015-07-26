@@ -39,9 +39,30 @@ extension UIAlertController {
     :return: アクションシートスタイルのUIAlertController
     */
     public class func actionSheetWithTitle(title: String? = nil) -> UIAlertController {
+        return actionSheet(title: title, message: nil)
+    }
+    
+    /**
+    メッセージを指定してアクションシートスタイルのUIAlertControllerを作成する
+    
+    :param: message アクションシートメッセージのキー
+    :return: アクションシートスタイルのUIAlertController
+    */
+    public class func actionSheetWithMessage(message: String? = nil) -> UIAlertController {
+        return actionSheet(title: nil, message: message)
+    }
+    
+    /**
+    タイトル、メッセージを指定してアクションシートスタイルのUIAlertControllerを作成する
+    
+    :param: title アクションシートタイトルのキー
+    :param: message アクションシートメッセージのキー
+    :return: アクションシートスタイルのUIAlertController
+    */
+    public class func actionSheet(#title: String?, message: String?) -> UIAlertController {
         return UIAlertController(title: title != nil ? NSLocalizedString(title!, comment: "") : title,
-            message: nil,
-            preferredStyle: .ActionSheet)
+                               message: message != nil ? NSLocalizedString(message!, comment: "") : message,
+                        preferredStyle: .ActionSheet)
     }
 
     /**

@@ -22,6 +22,8 @@
 		DAAB754B1B482A780040D87B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAAB754D1B482A780040D87B /* Localizable.strings */; };
 		DAB3DAFC1B5A8A4200F97F5D /* Snapshotter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3DAFB1B5A8A4200F97F5D /* Snapshotter.swift */; };
 		DAB3DAFE1B5AA17A00F97F5D /* UIImageExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3DAFD1B5AA17A00F97F5D /* UIImageExtention.swift */; };
+		DAB3DB041B6378A700F97F5D /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3DB031B6378A700F97F5D /* PreviewViewController.swift */; };
+		DAB3DB061B64A89900F97F5D /* SnapshotWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3DB051B64A89900F97F5D /* SnapshotWriter.swift */; };
 		DAF4F4571B482E4A008A7B88 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF4F4561B482E4A008A7B88 /* MapKit.framework */; };
 		DAFBFEE91B42C6B200FAAD05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFBFEE71B42C6B200FAAD05 /* Main.storyboard */; };
 		DAFBFEEB1B42C6B200FAAD05 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAFBFEEA1B42C6B200FAAD05 /* Images.xcassets */; };
@@ -85,6 +87,8 @@
 		DAB3DAFB1B5A8A4200F97F5D /* Snapshotter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snapshotter.swift; sourceTree = "<group>"; };
 		DAB3DAFD1B5AA17A00F97F5D /* UIImageExtention.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIImageExtention.swift; path = Sources/UIImageExtention.swift; sourceTree = "<group>"; };
 		DAB3DB001B6363A900F97F5D /* kokomap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kokomap-Bridging-Header.h"; sourceTree = "<group>"; };
+		DAB3DB031B6378A700F97F5D /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
+		DAB3DB051B64A89900F97F5D /* SnapshotWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotWriter.swift; sourceTree = "<group>"; };
 		DAF4F4561B482E4A008A7B88 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DAFBFEDE1B42C6B200FAAD05 /* kokomap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kokomap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFBFEE81B42C6B200FAAD05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -187,6 +191,7 @@
 			children = (
 				DAFBFF171B42C76200FAAD05 /* MapViewController.swift */,
 				DA11EC871B49709600C4A238 /* SettingsViewController.swift */,
+				DAB3DB031B6378A700F97F5D /* PreviewViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				DAB3DAFB1B5A8A4200F97F5D /* Snapshotter.swift */,
+				DAB3DB051B64A89900F97F5D /* SnapshotWriter.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -476,6 +482,8 @@
 				DAFBFF191B42C76200FAAD05 /* MapViewController.swift in Sources */,
 				DA11EC881B49709600C4A238 /* SettingsViewController.swift in Sources */,
 				DAB3DAFE1B5AA17A00F97F5D /* UIImageExtention.swift in Sources */,
+				DAB3DB061B64A89900F97F5D /* SnapshotWriter.swift in Sources */,
+				DAB3DB041B6378A700F97F5D /* PreviewViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

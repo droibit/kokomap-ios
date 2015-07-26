@@ -12,8 +12,6 @@ private let ROW_OSS = 1
 
 /**
  * 設定画面を表示するためのビューコントローラ
- *
- * @author kumagai
  */
 class SettingsViewController: UITableViewController {
 }

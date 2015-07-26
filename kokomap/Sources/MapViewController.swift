@@ -68,12 +68,12 @@ class MapViewController: UIViewController {
     
     // 地図にマーカーを追加する際に呼ぶアクション。
     @IBAction func onAddMarker(sender: AnyObject) {
-        presentAdditionalMarkerActionSheet()
+        presentAdditionalMarkerActionSheet(fromBarButtonItem: sender as! UIBarButtonItem)
     }
     
     // 地図の種類を変更する際に呼ぶアクション。
     @IBAction func onChangeMapType(sender: AnyObject) {
-        presentMapTypeActionSheet()
+        presentMapTypeActionSheet(fromBarButtonItem: sender as! UIBarButtonItem)
     }
 }
 
@@ -83,7 +83,7 @@ extension MapViewController: UITextFieldDelegate {
     /**
      追加するマーカーの種類を選択するためのアクションシートを表示する。
     */
-    private func presentAdditionalMarkerActionSheet() {
+    private func presentAdditionalMarkerActionSheet(fromBarButtonItem barButtonItem: UIBarButtonItem) {
         let actionSheet = UIAlertController.actionSheetWithTitle(title: "ActionSheetTitleDropMarker")
         actionSheet.addDefaultAction(title: NSLocalizedString("ActionSheetDropMarkerOnly", comment: "")) { _ in
             self.dropMarkerInCenterMap()
@@ -93,14 +93,14 @@ extension MapViewController: UITextFieldDelegate {
 //            self.presentBalloonSubtitleAlert()
 //        }
         actionSheet.addCancelAction(title: NSLocalizedString("AlertActionCancel", comment: ""), handler: nil)
-        
-        presentViewController(actionSheet, animated: true, completion: nil)
+
+        presentActionSheet(actionSheet, fromBarButtonItem: barButtonItem)
     }
     
     /**
     地図の種類を切り替えるためのアクションシートを表示する。
     */
-    private func presentMapTypeActionSheet() {
+    private func presentMapTypeActionSheet(fromBarButtonItem barButtonItem: UIBarButtonItem) {
         let actionSheet = UIAlertController.actionSheetWithTitle(title: "ActionSheetTitleMapType")
         // 変更先の地図の種類のみ表示する
         if mapView.mapType == MKMapType.Standard {
@@ -114,7 +114,7 @@ extension MapViewController: UITextFieldDelegate {
         }
         actionSheet.addCancelAction(title: NSLocalizedString("AlertActionCancel", comment: ""), handler: nil)
         
-        presentViewController(actionSheet, animated: true, completion: nil)
+        presentActionSheet(actionSheet, fromBarButtonItem: barButtonItem)
     }
     
     private func presentSettingsAlertController() {
@@ -124,8 +124,6 @@ extension MapViewController: UITextFieldDelegate {
     
     /**
     吹き出しの内容を入力するためのアラートを表示する
-    
-    :param: targetView 入力後に吹き出しを表示する対象
     */
     private func presentBalloonSubtitleAlert() {
         let alert = UIAlertController.alertWithTitle(title: "AnnotationSubtitleTitle")
@@ -149,6 +147,14 @@ extension MapViewController: UITextFieldDelegate {
         presentViewController(alert, animated: true, completion: nil)
     }
     
+    private func presentActionSheet(actionSheet: UIAlertController, fromBarButtonItem barButtonItem: UIBarButtonItem) {
+        // iPadの場合、ポップオーバーの設定がないとアプリがクラッシュする
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+            actionSheet.popoverPresentationController?.barButtonItem = barButtonItem
+        }
+        presentViewController(actionSheet, animated: true, completion: nil)
+    }
+    
     // MARK: UITextField Delegate
     
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
@@ -164,7 +170,7 @@ extension MapViewController: UITextFieldDelegate {
 }
 
 // MARK: - MKMapView Delegate
-extension MapViewController: MKMapViewDelegate, PhotosAlbumDelegate {
+extension MapViewController: MKMapViewDelegate, SnapshotDelegate {
     
     /**
     MapViewの初期設定を行う
@@ -221,24 +227,42 @@ extension MapViewController: MKMapViewDelegate, PhotosAlbumDelegate {
     }
     
     private func snapshotMapView(#dropedAnnotation: MKAnnotation) {
-        SVProgressHUD.showWithStatus(NSLocalizedString("HUDSavedSnapshotProgress", comment: ""))
-        
-        // TODO: 遅延入れたほうがいいかも
-        snapshotter.start(dropedAnnotation)
+        // ピンが落下して直ぐにHUDが表示されると分かりづらいので0.3秒後に実行する
+        let delayTime = dispatch_time(DISPATCH_TIME_NOW, Int64(0.3 * Double(NSEC_PER_SEC)))
+        dispatch_after(delayTime, dispatch_get_main_queue()) {
+            SVProgressHUD.showWithStatus(NSLocalizedString("HUDTakingSnapshotProgress", comment: ""))
+            self.snapshotter.start(dropedAnnotation)
+            
+            // TODO: ビューの操作をロック
+        }
     }
     
-    // MARK: Photos Album Delegate
-    
-    func savedPhotosAlbumError(error: NSError?, droppedAnnotation annotation: MKAnnotation) {
-        var msg: String
-        if error == nil {
-            msg = NSLocalizedString("HUDSavedSnapshotSuccess", comment: "")
-        } else {
-            msg = NSLocalizedString("HUDSavedSnapshotFailed", comment: "")
+    private func presentPreviewController(snapshotImage: UIImage) {
+        if let navController = storyboard?.instantiateViewControllerWithIdentifier("Preview") as? UINavigationController {
+            // アニメーションをフェードインに変更する
+            navController.modalPresentationStyle = .FormSheet
+            navController.modalTransitionStyle = .CrossDissolve
+            
+            if let previewController = navController.topViewController as? PreviewViewController {
+                previewController.snapshotImage = snapshotImage
+                presentViewController(navController, animated: true, completion: nil)
+            }
         }
-        SVProgressHUD.showSuccessWithStatus(msg)
-        
+    }
+    
+    // MARK: Snapshot Delegate
+    
+    func snapshotImage(image: UIImage?, droppedAnnotation annotation: MKAnnotation) {
+        // 成否にかかわらず地図からはピンを削除しておく
         mapView.removeAnnotation(annotation)
+
+        
+        if let snapshotImage = image {
+            SVProgressHUD.dismiss()
+            presentPreviewController(snapshotImage)
+        } else {
+            SVProgressHUD.showErrorWithStatus(NSLocalizedString("HUDTakedSnapshotFailed", comment: ""))
+        }
     }
 }
 
@@ -307,5 +331,4 @@ extension MapViewController: CLLocationManagerDelegate {
 
 // MARK: - Helper
 extension MapViewController {
-    
 }

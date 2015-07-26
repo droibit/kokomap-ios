@@ -15,7 +15,7 @@ import MapKit
 class Snapshotter: NSObject {
     
     private let mapView: MKMapView
-    private let delegate: PhotosAlbumDelegate
+    private let delegate: SnapshotDelegate
     
     // 地図に追加したピン(削除するときに必要）
     private var annotation: MKAnnotation!
@@ -27,7 +27,7 @@ class Snapshotter: NSObject {
     
     :param: mapView スナップショット対象の地図
     */
-    init(target mapView: MKMapView, delegate: PhotosAlbumDelegate) {
+    init(target mapView: MKMapView, delegate: SnapshotDelegate) {
         self.mapView = mapView
         self.delegate = delegate
     }
@@ -47,7 +47,7 @@ class Snapshotter: NSObject {
             // スナップショットの生成に失敗した場合
             if let snapshotError = error {
                 NSLog("Snapshot Error: \(snapshotError.localizedDescription)")
-                self.delegate.savedPhotosAlbumError(snapshotError, droppedAnnotation: self.annotation)
+                self.delegate.snapshotImage(nil, droppedAnnotation: self.annotation)
                 return
             }
             
@@ -74,7 +74,9 @@ class Snapshotter: NSObject {
             UIGraphicsEndImageContext()
             
             let jpegImage = UIImage(data: UIImageJPEGRepresentation(mapImage.imageByCloppedSquareImage(), 85.0))
-            UIImageWriteToSavedPhotosAlbum(jpegImage, self, "image:didFinishSavingWithError:contextInfo:", nil)
+
+            self.delegate.snapshotImage(jpegImage, droppedAnnotation: self.annotation)
+            self.annotation = nil
         }
     }
     
@@ -89,28 +91,19 @@ class Snapshotter: NSObject {
         
         return options
     }
-    
-    // MARK: Saved Photos Album
-    
-    func image(image: UIImage, didFinishSavingWithError error: NSError?, contextInfo: UnsafeMutablePointer<Void>) {
-        if let savingError = error {
-            NSLog("Snapshot saving error: \(savingError.localizedDescription)")
-        }
-        delegate.savedPhotosAlbumError(error, droppedAnnotation: annotation)
-        annotation = nil
-    }
 }
 
 /**
   アルバムに地図のスナップショットを保存した際に呼ばれる
 */
-protocol PhotosAlbumDelegate {
+protocol SnapshotDelegate {
     
     /**
     スナップショットをアルバムに保存した後呼ばれる処理
     
     :param: error エラー情報
+    :param: snapshotImage スナップショットの画像
     :param: droppedAnnotation 地図に追加したピン
     */
-    func savedPhotosAlbumError(error: NSError?, droppedAnnotation annotation: MKAnnotation)
+    func snapshotImage(image: UIImage?, droppedAnnotation annotation: MKAnnotation)
 }

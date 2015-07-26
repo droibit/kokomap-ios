@@ -8,4 +8,4 @@
 
 CFBundleDisplayName = "ココマップ";
 
-"NSLocationWhenInUseUsageDescription"="地図上で現在地へ移動する際に\n必要とします";
+"NSLocationWhenInUseUsageDescription"="地図上で現在地へ移動する際に\n必要とします。";

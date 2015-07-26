@@ -212,6 +212,87 @@
             </objects>
             <point key="canvasLocation" x="1896" y="10"/>
         </scene>
+        <!--Preview-->
+        <scene sceneID="bEG-SM-MP7">
+            <objects>
+                <viewController id="7Gm-vC-BOL" customClass="PreviewViewController" customModule="kokomap" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cNy-Dg-IsT"/>
+                        <viewControllerLayoutGuide type="bottom" id="eKV-df-jCm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lOp-5o-L1v">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GlS-fe-uup">
+                                <rect key="frame" x="0.0" y="556" width="600" height="44"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="44" id="6un-LX-KWk"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="Ulk-WE-36U"/>
+                                    <barButtonItem systemItem="action" id="zQX-Tt-9Qo">
+                                        <connections>
+                                            <action selector="onShareSnapshot:" destination="7Gm-vC-BOL" id="y4r-U1-niw"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="ZOH-Hy-Rk1"/>
+                                    <barButtonItem systemItem="trash" id="1hw-XW-eWo">
+                                        <connections>
+                                            <action selector="onDeleteSnapshot:" destination="7Gm-vC-BOL" id="fb5-9I-g4w"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="tUp-e7-F5L"/>
+                                </items>
+                            </toolbar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="rnD-ns-hRZ">
+                                <rect key="frame" x="0.0" y="64" width="600" height="492"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rnD-ns-hRZ" firstAttribute="leading" secondItem="lOp-5o-L1v" secondAttribute="leading" id="1ne-VO-drY"/>
+                            <constraint firstItem="GlS-fe-uup" firstAttribute="top" secondItem="rnD-ns-hRZ" secondAttribute="bottom" id="985-k8-KeB"/>
+                            <constraint firstItem="eKV-df-jCm" firstAttribute="top" secondItem="GlS-fe-uup" secondAttribute="bottom" id="F3a-da-8IF"/>
+                            <constraint firstAttribute="trailing" secondItem="GlS-fe-uup" secondAttribute="trailing" id="YuB-px-xNF"/>
+                            <constraint firstAttribute="trailing" secondItem="rnD-ns-hRZ" secondAttribute="trailing" id="bVD-Mf-MSk"/>
+                            <constraint firstItem="rnD-ns-hRZ" firstAttribute="top" secondItem="cNy-Dg-IsT" secondAttribute="bottom" id="p5e-IV-b6z"/>
+                            <constraint firstItem="GlS-fe-uup" firstAttribute="leading" secondItem="lOp-5o-L1v" secondAttribute="leading" id="pod-MP-Zse"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Preview" id="GRa-fZ-CFh">
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="UA0-CD-84b">
+                            <connections>
+                                <action selector="onSaveSnapshot:" destination="7Gm-vC-BOL" id="2db-Mj-h6l"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="snapshotView" destination="rnD-ns-hRZ" id="9Eu-gf-SNc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="or2-Ur-GUT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2720" y="797"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="vye-jy-dpm">
+            <objects>
+                <navigationController storyboardIdentifier="Preview" automaticallyAdjustsScrollViewInsets="NO" id="qPR-aN-A7G" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="MK3-LI-IbY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="7Gm-vC-BOL" kind="relationship" relationship="rootViewController" id="A67-TH-j7k"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eJu-7g-fez" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1908" y="797"/>
+        </scene>
     </scenes>
     <resources>
         <image name="NavSettings" width="22" height="22"/>
