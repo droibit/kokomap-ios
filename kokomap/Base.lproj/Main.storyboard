@@ -130,19 +130,27 @@
                                             <outlet property="delegate" destination="BYZ-38-t0r" id="1xe-mx-bCk"/>
                                         </connections>
                                     </mapView>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="MapCenter" translatesAutoresizingMaskIntoConstraints="NO" id="lon-hv-Hqa">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MapCenter" translatesAutoresizingMaskIntoConstraints="NO" id="lon-hv-Hqa">
                                         <rect key="frame" x="288" y="234" width="24" height="24"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="Qn8-MF-iJy" firstAttribute="leading" secondItem="OGr-Gh-eb7" secondAttribute="leading" id="YiH-qc-OIL"/>
+                                    <constraint firstAttribute="centerX" secondItem="lon-hv-Hqa" secondAttribute="centerX" id="bD3-cj-YbH"/>
                                     <constraint firstAttribute="centerY" secondItem="lon-hv-Hqa" secondAttribute="centerY" id="i4m-dR-mz6"/>
                                     <constraint firstAttribute="trailing" secondItem="Qn8-MF-iJy" secondAttribute="trailing" id="kNQ-Yt-Div"/>
                                     <constraint firstAttribute="bottom" secondItem="Qn8-MF-iJy" secondAttribute="bottom" id="ppL-kl-Sk6"/>
                                     <constraint firstItem="Qn8-MF-iJy" firstAttribute="top" secondItem="OGr-Gh-eb7" secondAttribute="top" id="sT3-as-fOS"/>
                                     <constraint firstAttribute="centerX" secondItem="lon-hv-Hqa" secondAttribute="centerX" id="upc-ny-0Yl"/>
+                                    <constraint firstAttribute="centerY" secondItem="lon-hv-Hqa" secondAttribute="centerY" id="yTk-Nl-Fq8"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="i4m-dR-mz6"/>
+                                        <exclude reference="upc-ny-0Yl"/>
+                                    </mask>
+                                </variation>
                             </view>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R5W-VG-ZbK">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
