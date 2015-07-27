@@ -13,6 +13,11 @@ import UIKit
 */
 class PreviewViewController: UIViewController {
     
+    
+    @IBOutlet weak var shareBarButton: UIBarButtonItem!
+    @IBOutlet weak var deleteBarButton: UIBarButtonItem!
+    @IBOutlet weak var saveBarButton: UIBarButtonItem!
+    
     var snapshotImage: UIImage!
     var snapshotWriter: SnapshotWriter!
 
@@ -43,16 +48,30 @@ class PreviewViewController: UIViewController {
     
     
     @IBAction func onShareSnapshot(sender: AnyObject) {
+        shareSnapshot()
     }
 }
 
-// MARk: - Actions
+// MARK: - Actions
 extension PreviewViewController: SnapshotWriteDelegate {
     
+    /**
+    スナップショットをアルバムに保存する
+    */
     private func saveSnapshot() {
-        SVProgressHUD.showWithStatus(NSLocalizedString("HUDSavingSnapshotProgress", comment: ""))
+        lockViews()
         
+        SVProgressHUD.showWithStatus(NSLocalizedString("HUDSavingSnapshotProgress", comment: ""))
         snapshotWriter.writeImage(snapshotImage)
+    }
+    
+    /**
+    スナップショットを他アプリに教諭する
+    */
+    private func shareSnapshot() {
+        let images: [UIImage] = [snapshotImage]
+        let activityController = UIActivityViewController(activityItems: images, applicationActivities: nil)
+        presentViewController(activityController, animated: true, completion: nil)
     }
     
     // MARK: SnapshotWriteDelegate
@@ -64,6 +83,16 @@ extension PreviewViewController: SnapshotWriteDelegate {
             } else {
                 SVProgressHUD.showErrorWithStatus(NSLocalizedString("HUDSavedSnapshotFailed", comment: ""))
             }
+        }
+    }
+}
+
+// MARK: - Helper
+extension PreviewViewController {
+    
+    private func lockViews() {
+        for button in [saveBarButton, shareBarButton, deleteBarButton] {
+            button.enabled = false
         }
     }
 }

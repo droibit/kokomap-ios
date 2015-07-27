@@ -303,6 +303,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="deleteBarButton" destination="1hw-XW-eWo" id="BJh-8P-Mf5"/>
+                        <outlet property="saveBarButton" destination="UA0-CD-84b" id="Asf-D5-pTr"/>
+                        <outlet property="shareBarButton" destination="zQX-Tt-9Qo" id="MER-lP-L2e"/>
                         <outlet property="snapshotView" destination="rnD-ns-hRZ" id="9Eu-gf-SNc"/>
                     </connections>
                 </viewController>

@@ -78,7 +78,7 @@ class Snapshotter: NSObject {
             let mapImage = UIGraphicsGetImageFromCurrentImageContext()
             UIGraphicsEndImageContext()
             
-            let jpegImage = UIImage(data: UIImageJPEGRepresentation(mapImage.imageByCloppedSquareImage(), 85.0))
+            let jpegImage = UIImage(data: UIImageJPEGRepresentation(mapImage.imageByCloppedSquareImage(), 80.0))
             // デリゲートはUIスレッドに戻してからコールする
             dispatch_async(dispatch_get_main_queue()) {
                 self.delegate.snapshotImage(jpegImage, droppedAnnotation: self.annotation)
