@@ -169,6 +169,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="dropPinBarButton" destination="aVg-x4-gkd" id="sxH-AC-Bch"/>
                         <outlet property="mapView" destination="Qn8-MF-iJy" id="eBR-c3-fhf"/>
                     </connections>
                 </viewController>

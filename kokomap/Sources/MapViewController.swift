@@ -19,6 +19,7 @@ private let kMaxAlertSubtitleLength = 25
 class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var dropPinBarButton: UIBarButtonItem!
     
     private let locationManager = CLLocationManager()
     private var snapshotter: Snapshotter!
@@ -233,7 +234,8 @@ extension MapViewController: MKMapViewDelegate, SnapshotDelegate {
             SVProgressHUD.showWithStatus(NSLocalizedString("HUDTakingSnapshotProgress", comment: ""))
             self.snapshotter.start(dropedAnnotation)
             
-            // TODO: ビューの操作をロック
+            // ビューの操作をロックする
+            self.lockViews()
         }
     }
     
@@ -253,9 +255,9 @@ extension MapViewController: MKMapViewDelegate, SnapshotDelegate {
     // MARK: Snapshot Delegate
     
     func snapshotImage(image: UIImage?, droppedAnnotation annotation: MKAnnotation) {
+        unlockViews()
         // 成否にかかわらず地図からはピンを削除しておく
         mapView.removeAnnotation(annotation)
-
         
         if let snapshotImage = image {
             SVProgressHUD.dismiss()
@@ -331,4 +333,14 @@ extension MapViewController: CLLocationManagerDelegate {
 
 // MARK: - Helper
 extension MapViewController {
+    
+    private func lockViews() {
+        mapView.userInteractionEnabled = false
+        dropPinBarButton.enabled = false
+    }
+    
+    private func unlockViews() {
+        mapView.userInteractionEnabled = true
+        dropPinBarButton.enabled = true
+    }
 }

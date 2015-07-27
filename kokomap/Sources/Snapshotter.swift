@@ -14,8 +14,11 @@ import MapKit
 */
 class Snapshotter: NSObject {
     
+    var taking: Bool
+    
     private let mapView: MKMapView
     private let delegate: SnapshotDelegate
+    private let backgroundQueue: dispatch_queue_t
     
     // 地図に追加したピン(削除するときに必要）
     private var annotation: MKAnnotation!
@@ -30,6 +33,8 @@ class Snapshotter: NSObject {
     init(target mapView: MKMapView, delegate: SnapshotDelegate) {
         self.mapView = mapView
         self.delegate = delegate
+        self.taking = false
+        self.backgroundQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)
     }
     
     // MARK: Public Methods
@@ -43,7 +48,7 @@ class Snapshotter: NSObject {
         annotation = droppedAnnotation
         
         let snapshotter = MKMapSnapshotter(options: makeSnapshotOptions())
-        snapshotter.startWithCompletionHandler { snapshot, error in
+        snapshotter.startWithQueue(backgroundQueue) { snapshot, error in
             // スナップショットの生成に失敗した場合
             if let snapshotError = error {
                 NSLog("Snapshot Error: \(snapshotError.localizedDescription)")
@@ -74,9 +79,11 @@ class Snapshotter: NSObject {
             UIGraphicsEndImageContext()
             
             let jpegImage = UIImage(data: UIImageJPEGRepresentation(mapImage.imageByCloppedSquareImage(), 85.0))
-
-            self.delegate.snapshotImage(jpegImage, droppedAnnotation: self.annotation)
-            self.annotation = nil
+            // デリゲートはUIスレッドに戻してからコールする
+            dispatch_async(dispatch_get_main_queue()) {
+                self.delegate.snapshotImage(jpegImage, droppedAnnotation: self.annotation)
+                self.annotation = nil
+            }
         }
     }
     
