@@ -25,6 +25,9 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="22" y="12" width="356" height="21"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -44,6 +47,9 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
+                                                    <variation key="widthClass=compact" misplaced="YES">
+                                                        <rect key="frame" x="22" y="12" width="323" height="21"/>
+                                                    </variation>
                                                 </label>
                                             </subviews>
                                             <constraints>
@@ -137,27 +143,52 @@
                                     </barButtonItem>
                                 </items>
                             </toolbar>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qn8-MF-iJy">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OGr-Gh-eb7">
                                 <rect key="frame" x="0.0" y="64" width="600" height="492"/>
-                                <connections>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="1xe-mx-bCk"/>
-                                </connections>
-                            </mapView>
+                                <subviews>
+                                    <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" showsUserLocation="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qn8-MF-iJy">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="492"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="1xe-mx-bCk"/>
+                                        </connections>
+                                    </mapView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MapCenter" translatesAutoresizingMaskIntoConstraints="NO" id="lon-hv-Hqa">
+                                        <rect key="frame" x="288" y="234" width="24" height="24"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="Qn8-MF-iJy" secondAttribute="trailing" id="G83-cW-pJ5"/>
+                                    <constraint firstAttribute="bottom" secondItem="Qn8-MF-iJy" secondAttribute="bottom" id="Hub-mr-7OZ"/>
+                                    <constraint firstAttribute="centerX" secondItem="lon-hv-Hqa" secondAttribute="centerX" id="Sh6-Iv-bcM"/>
+                                    <constraint firstItem="Qn8-MF-iJy" firstAttribute="top" secondItem="OGr-Gh-eb7" secondAttribute="top" id="Ttr-Hi-J7x"/>
+                                    <constraint firstAttribute="centerX" secondItem="lon-hv-Hqa" secondAttribute="centerX" id="Y4z-Ig-Pcs"/>
+                                    <constraint firstAttribute="centerY" secondItem="lon-hv-Hqa" secondAttribute="centerY" id="kNl-Tj-P8u"/>
+                                    <constraint firstItem="Qn8-MF-iJy" firstAttribute="leading" secondItem="OGr-Gh-eb7" secondAttribute="leading" id="m61-ia-NdW"/>
+                                    <constraint firstAttribute="centerY" secondItem="lon-hv-Hqa" secondAttribute="centerY" id="mMM-zk-WDy"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Sh6-Iv-bcM"/>
+                                        <exclude reference="kNl-Tj-P8u"/>
+                                    </mask>
+                                </variation>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Qn8-MF-iJy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="7Ij-t5-1Lt"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YZE-Up-yt2" secondAttribute="bottom" id="BWc-c6-ojT"/>
-                            <constraint firstAttribute="trailing" secondItem="Qn8-MF-iJy" secondAttribute="trailing" id="Ftk-Nf-3Vr"/>
-                            <constraint firstItem="YZE-Up-yt2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="P2l-i3-QmA"/>
-                            <constraint firstItem="YZE-Up-yt2" firstAttribute="top" secondItem="Qn8-MF-iJy" secondAttribute="bottom" id="axr-AP-Tfk"/>
-                            <constraint firstAttribute="trailing" secondItem="YZE-Up-yt2" secondAttribute="trailing" id="biU-6c-PUM"/>
-                            <constraint firstItem="Qn8-MF-iJy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="hSj-Gj-7Kh"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Qn8-MF-iJy" secondAttribute="bottom" id="zwf-Hv-8pl"/>
+                            <constraint firstAttribute="trailing" secondItem="OGr-Gh-eb7" secondAttribute="trailing" id="JTu-uR-kpb"/>
+                            <constraint firstItem="OGr-Gh-eb7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="ax9-Pw-qFd"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="YZE-Up-yt2" secondAttribute="bottom" id="cin-bJ-h3j"/>
+                            <constraint firstAttribute="trailing" secondItem="YZE-Up-yt2" secondAttribute="trailing" id="cuc-eq-8A8"/>
+                            <constraint firstItem="OGr-Gh-eb7" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="46" id="lcI-ui-Zd7"/>
+                            <constraint firstItem="YZE-Up-yt2" firstAttribute="top" secondItem="OGr-Gh-eb7" secondAttribute="bottom" id="qT5-1c-tlV"/>
+                            <constraint firstItem="YZE-Up-yt2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vlF-r8-WuK"/>
+                            <constraint firstItem="OGr-Gh-eb7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="wYj-l9-rLH"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="zwf-Hv-8pl"/>
+                                <exclude reference="lcI-ui-Zd7"/>
                             </mask>
                         </variation>
                     </view>
@@ -296,6 +327,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="MapCenter" width="24" height="24"/>
         <image name="NavSettings" width="22" height="22"/>
         <image name="ToolAddMarker" width="22" height="22"/>
         <image name="ToolChangeMapType" width="22" height="22"/>
