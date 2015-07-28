@@ -20,12 +20,12 @@
 		DA28FA6C1B67B055005480C5 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DA28FA6B1B67B055005480C5 /* MainInterface.storyboard */; };
 		DA28FA6F1B67B055005480C5 /* extention.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = DA28FA641B67B055005480C5 /* extention.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		DA28FA761B67B0A8005480C5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = DA28FA781B67B0A8005480C5 /* InfoPlist.strings */; };
+		DA28FA7B1B67C2AF005480C5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA28FA7A1B67C2AF005480C5 /* MapKit.framework */; };
 		DAAB754B1B482A780040D87B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DAAB754D1B482A780040D87B /* Localizable.strings */; };
 		DAB3DAFC1B5A8A4200F97F5D /* Snapshotter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3DAFB1B5A8A4200F97F5D /* Snapshotter.swift */; };
 		DAB3DAFE1B5AA17A00F97F5D /* UIImageExtention.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3DAFD1B5AA17A00F97F5D /* UIImageExtention.swift */; };
 		DAB3DB041B6378A700F97F5D /* PreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3DB031B6378A700F97F5D /* PreviewViewController.swift */; };
 		DAB3DB061B64A89900F97F5D /* SnapshotWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAB3DB051B64A89900F97F5D /* SnapshotWriter.swift */; };
-		DAF4F4571B482E4A008A7B88 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DAF4F4561B482E4A008A7B88 /* MapKit.framework */; };
 		DAFBFEE91B42C6B200FAAD05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAFBFEE71B42C6B200FAAD05 /* Main.storyboard */; };
 		DAFBFEEB1B42C6B200FAAD05 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAFBFEEA1B42C6B200FAAD05 /* Images.xcassets */; };
 		DAFBFEEE1B42C6B200FAAD05 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = DAFBFEEC1B42C6B200FAAD05 /* LaunchScreen.xib */; };
@@ -85,6 +85,7 @@
 		DA28FA6B1B67B055005480C5 /* MainInterface.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MainInterface.storyboard; sourceTree = "<group>"; };
 		DA28FA771B67B0A8005480C5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DA28FA791B67B0AB005480C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		DA28FA7A1B67C2AF005480C5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DA6D79261B46D2BE001FF422 /* NotificationCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = NotificationCenter.framework; path = System/Library/Frameworks/NotificationCenter.framework; sourceTree = SDKROOT; };
 		DAAB754C1B482A780040D87B /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DAB3DAFB1B5A8A4200F97F5D /* Snapshotter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Snapshotter.swift; sourceTree = "<group>"; };
@@ -92,7 +93,6 @@
 		DAB3DB001B6363A900F97F5D /* kokomap-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "kokomap-Bridging-Header.h"; sourceTree = "<group>"; };
 		DAB3DB031B6378A700F97F5D /* PreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreviewViewController.swift; sourceTree = "<group>"; };
 		DAB3DB051B64A89900F97F5D /* SnapshotWriter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SnapshotWriter.swift; sourceTree = "<group>"; };
-		DAF4F4561B482E4A008A7B88 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DAFBFEDE1B42C6B200FAAD05 /* kokomap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kokomap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DAFBFEE81B42C6B200FAAD05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DAFBFEEA1B42C6B200FAAD05 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA11EC911B4AC35500C4A238 /* CoreLocation.framework in Frameworks */,
-				DAF4F4571B482E4A008A7B88 /* MapKit.framework in Frameworks */,
+				DA28FA7B1B67C2AF005480C5 /* MapKit.framework in Frameworks */,
 				66894799A17183F67C99881E /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,8 +183,8 @@
 		DA6D79251B46D2BE001FF422 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DA28FA7A1B67C2AF005480C5 /* MapKit.framework */,
 				DA11EC901B4AC35500C4A238 /* CoreLocation.framework */,
-				DAF4F4561B482E4A008A7B88 /* MapKit.framework */,
 				DA6D79261B46D2BE001FF422 /* NotificationCenter.framework */,
 				6653364F00CFF5B29212390D /* libPods.a */,
 			);
@@ -371,7 +371,7 @@
 						DevelopmentTeam = 2M4C25U6D7;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
-								enabled = 0;
+								enabled = 1;
 							};
 						};
 					};
