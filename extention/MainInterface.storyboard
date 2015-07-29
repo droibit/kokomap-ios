@@ -7,29 +7,30 @@
         <!--Today View Controller-->
         <scene sceneID="cwh-vc-ff4">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="M4Y-Lb-cyx" customClass="TodayViewController" customModule="extention" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
                         <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="S3S-Oj-5AN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cfh-38-Md6">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ePK-5k-Jag">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZP5-3S-tMF">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="34"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <state key="normal" title="+ Snapshot">
                                                 <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <color key="titleShadowColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                                             </state>
                                             <connections>
-                                                <action selector="onLaunchApplication:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="v57-4P-PHe"/>
+                                                <action selector="onLaunchApplication:" destination="M4Y-Lb-cyx" eventType="touchUpInside" id="xac-LZ-JdJ"/>
                                             </connections>
                                         </button>
                                     </subviews>
@@ -40,7 +41,10 @@
                                         <constraint firstAttribute="bottom" secondItem="ZP5-3S-tMF" secondAttribute="bottom" id="fOH-Wo-grS"/>
                                     </constraints>
                                 </view>
-                                <blurEffect style="light"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="dvH-cn-scc"/>
+                                </constraints>
+                                <blurEffect style="extraLight"/>
                             </visualEffectView>
                         </subviews>
                         <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
@@ -56,12 +60,11 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="34"/>
+                    <size key="freeformSize" width="320" height="43"/>
                     <connections>
                         <outlet property="blurEffectView" destination="Cfh-38-Md6" id="1ku-fH-uRc"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="516" y="285"/>
         </scene>
