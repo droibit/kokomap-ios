@@ -296,7 +296,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Preview" id="GRa-fZ-CFh">
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="UA0-CD-84b">
+                        <barButtonItem key="rightBarButtonItem" style="done" systemItem="save" id="UA0-CD-84b">
                             <connections>
                                 <action selector="onSaveSnapshot:" destination="7Gm-vC-BOL" id="2db-Mj-h6l"/>
                             </connections>

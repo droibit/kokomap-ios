@@ -25,9 +25,9 @@
 "AnnotationSubtitleTitle"="吹き出しの内容";
 "AnnotationSubtitlePlaceholder"="最大25文字";
 
-"HUDTakingSnapshotProgress"="地図画像の生成中...";
-"HUDTakedSnapshotFailed"="地図画像の生成に失敗";
+"HUDTakingSnapshotProgress"="スナップショットの生成中...";
+"HUDTakedSnapshotFailed"="スナップショットの生成に失敗";
 
-"HUDSavingSnapshotProgress"="地図画像の保存中...";
-"HUDSavedSnapshotSuccess"="地図画像の保存に成功";
-"HUDSavedSnapshotFailed"="地図画像の保存に失敗";
+"HUDSavingSnapshotProgress"="スナップショットの保存中...";
+"HUDSavedSnapshotSuccess"="スナップショットの保存に成功";
+"HUDSavedSnapshotFailed"="スナップショットの保存に失敗";

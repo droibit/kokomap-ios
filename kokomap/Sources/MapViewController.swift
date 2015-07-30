@@ -69,12 +69,12 @@ class MapViewController: UIViewController {
     
     // 地図にマーカーを追加する際に呼ぶアクション。
     @IBAction func onAddMarker(sender: AnyObject) {
-        presentAdditionalMarkerActionSheet(fromBarButtonItem: sender as! UIBarButtonItem)
+        presentAdditionalMarkerActionSheet(fromBarButton: sender as! UIBarButtonItem)
     }
     
     // 地図の種類を変更する際に呼ぶアクション。
     @IBAction func onChangeMapType(sender: AnyObject) {
-        presentMapTypeActionSheet(fromBarButtonItem: sender as! UIBarButtonItem)
+        presentMapTypeActionSheet(fromBarButton: sender as! UIBarButtonItem)
     }
 }
 
@@ -84,7 +84,7 @@ extension MapViewController: UITextFieldDelegate {
     /**
      追加するマーカーの種類を選択するためのアクションシートを表示する。
     */
-    private func presentAdditionalMarkerActionSheet(fromBarButtonItem barButtonItem: UIBarButtonItem) {
+    private func presentAdditionalMarkerActionSheet(fromBarButton barButton: UIBarButtonItem) {
         let actionSheet = UIAlertController.actionSheetWithTitle(title: "ActionSheetTitleDropMarker")
         actionSheet.addDefaultAction(title: NSLocalizedString("ActionSheetDropMarkerOnly", comment: "")) { _ in
             self.dropMarkerInCenterMap()
@@ -95,13 +95,13 @@ extension MapViewController: UITextFieldDelegate {
 //        }
         actionSheet.addCancelAction(title: NSLocalizedString("AlertActionCancel", comment: ""), handler: nil)
 
-        presentActionSheet(actionSheet, fromBarButtonItem: barButtonItem)
+        presentActionSheet(actionSheet, fromBarButton: barButton)
     }
     
     /**
     地図の種類を切り替えるためのアクションシートを表示する。
     */
-    private func presentMapTypeActionSheet(fromBarButtonItem barButtonItem: UIBarButtonItem) {
+    private func presentMapTypeActionSheet(fromBarButton barButton: UIBarButtonItem) {
         let actionSheet = UIAlertController.actionSheetWithTitle(title: "ActionSheetTitleMapType")
         // 変更先の地図の種類のみ表示する
         if mapView.mapType == MKMapType.Standard {
@@ -115,7 +115,7 @@ extension MapViewController: UITextFieldDelegate {
         }
         actionSheet.addCancelAction(title: NSLocalizedString("AlertActionCancel", comment: ""), handler: nil)
         
-        presentActionSheet(actionSheet, fromBarButtonItem: barButtonItem)
+        presentActionSheet(actionSheet, fromBarButton: barButton)
     }
     
     private func presentSettingsAlertController() {
@@ -148,10 +148,10 @@ extension MapViewController: UITextFieldDelegate {
         presentViewController(alert, animated: true, completion: nil)
     }
     
-    private func presentActionSheet(actionSheet: UIAlertController, fromBarButtonItem barButtonItem: UIBarButtonItem) {
+    private func presentActionSheet(actionSheet: UIAlertController, fromBarButton barButton: UIBarButtonItem) {
         // iPadの場合、ポップオーバーの設定がないとアプリがクラッシュする
         if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
-            actionSheet.popoverPresentationController?.barButtonItem = barButtonItem
+            actionSheet.popoverPresentationController?.barButtonItem = barButton
         }
         presentViewController(actionSheet, animated: true, completion: nil)
     }

@@ -48,7 +48,7 @@ class PreviewViewController: UIViewController {
     
     
     @IBAction func onShareSnapshot(sender: AnyObject) {
-        shareSnapshot()
+        shareSnapshot(fromBarButton: sender as! UIBarButtonItem)
     }
 }
 
@@ -68,9 +68,13 @@ extension PreviewViewController: SnapshotWriteDelegate {
     /**
     スナップショットを他アプリに教諭する
     */
-    private func shareSnapshot() {
+    private func shareSnapshot(fromBarButton barButton: UIBarButtonItem) {
         let images: [UIImage] = [snapshotImage]
         let activityController = UIActivityViewController(activityItems: images, applicationActivities: nil)
+        
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+            activityController.popoverPresentationController?.barButtonItem = barButton
+        }
         presentViewController(activityController, animated: true, completion: nil)
     }
     
@@ -95,4 +99,5 @@ extension PreviewViewController {
             button.enabled = false
         }
     }
+    
 }

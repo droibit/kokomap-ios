@@ -1,18 +1,21 @@
 
 /* Class = "UILabel"; text = "Open Source License"; ObjectID = "6mf-Yl-sJ8"; */
-"6mf-Yl-sJ8.text" = "Open Source License";
+"6mf-Yl-sJ8.text" = "オープンソースライセンス";
 
 /* Class = "UINavigationItem"; title = "Settings"; ObjectID = "AcT-To-ORc"; */
-"AcT-To-ORc.title" = "Settings";
+"AcT-To-ORc.title" = "設定";
+
+/* Class = "UINavigationItem"; title = "Preview"; ObjectID = "GRa-fZ-CFh"; */
+"GRa-fZ-CFh.title" = "プレビュー";
 
 /* Class = "UILabel"; text = "Build Version 1.0"; ObjectID = "GaI-83-nn8"; */
-"GaI-83-nn8.text" = "Build Version 1.0";
+"GaI-83-nn8.text" = "ビルドバージョン 1.0";
 
 /* Class = "UINavigationItem"; title = "KOKO MAP"; ObjectID = "ejE-d4-eEA"; */
-"ejE-d4-eEA.title" = "KOKO MAP";
+"ejE-d4-eEA.title" = "ココマップ";
 
 /* Class = "UIBarButtonItem"; title = "Close"; ObjectID = "hFq-B8-wvN"; */
-"hFq-B8-wvN.title" = "Close";
+"hFq-B8-wvN.title" = "閉じる";
 
 /* Class = "UITableViewSection"; headerTitle = "Summary"; ObjectID = "nLv-zZ-aDf"; */
-"nLv-zZ-aDf.headerTitle" = "Summary";
+"nLv-zZ-aDf.headerTitle" = "概要";
